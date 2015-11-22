@@ -261,7 +261,14 @@ au BufRead,BufNewFile *.less setfiletype css
 let g:tagbar_compact = 1
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-let g:tagbar_type_javascript = {'ctagsbin' : '/usr/local/bin/jsctags'}
+let g:tagbar_type_javascript = {
+            \'ctagsbin' : '/usr/local/bin/jsctags',
+            \ 'kinds' : [
+                \ 'v:variables:1:0',
+                \ 'f:functions:1:0',
+            \ ],
+            \}
+
 " theme setting
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 syntax enable
@@ -302,22 +309,30 @@ colorscheme molokai
 
 "let g:airline_powerline_fonts = 1
 let g:airline_inactive_collapse=1
-let g:airline_section_b = ''
 let g:airline_section_c = '%t'
 
 "no need   buffer line 
 let g:airline#extensions#bufferline#enabled = 0
 let g:airline#extensions#bufferline#overwrite_variables = 0
 
+let g:airline#extensions#syntastic#enabled = 1
 
-let g:airline#extensions#branch#enabled = 1
-let g:airline#extensions#branch#displayed_head_limit = 10
+"let g:airline#extensions#tabline#formatter = 'unique_tail'
+"let g:airline#extensions#tabline#formatter = 'unique_tail_improved'
+let g:airline#extensions#tagbar#enabled = 1
+let g:airline#extensions#whitespace#trailing_format = 't[%s]'
 
-
-let g:airline#extensions#syntastic#enabled = 0
-
-let g:airline#extensions#tabline#formatter = 'unique_tail'
-let g:airline#extensions#tabline#formatter = 'unique_tail_improved'
+let g:airline#extensions#default#layout = [
+            \ [ 'a', 'c' ],
+            \ [ 'warning' ]
+            \ ]
+"let g:airline#extensions#default#section_truncate_width = {
+"\'a': 0,
+"\'b': 0,
+"\ 'x': 0,
+"\ 'y': 0,
+"\ 'z': 0,
+"\}
 
 ""airline setting
 "let g:airline_theme = "lucius" "设定主题

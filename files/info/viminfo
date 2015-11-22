@@ -8,7 +8,7 @@
 # hlsearch on (H) or off (h):
 ~H
 # Last Search Pattern:
-~MSle0~/syntax
+~MSle0~/cmd
 
 # Last Substitute Search Pattern:
 ~MSle0&.*
@@ -17,29 +17,55 @@
 $Nov 17, 2015
 
 # Command Line History (newest to oldest):
-:q
-:wq
 :qa
+:wq
+:vsp
+:w
+:q
+:TagbarCurrentTag
+:messages
+:q!
+:b1
+:sp
+:TernDoc
+:TernDefPreview
+:e
+:'<,'>s/'/"/g
+:b6
+:b4
 :wa
+:'<,'>
+:b5
+:n text_util.js
+:n main.js
+:menussags
+:messags
+:TagbarDebugEnd
+:TagbarDebug
+:AirlineTheme
+:help airline
+:TagbarGetTypeConfig javascript
+:TagbarGetTypeConfig javascriptp
+:help tagbar 
+:qa!
+:source ~/.vim/vimrc 
+:set statusline
+:set filetype
+:qÔºÅ
+:45
+:h tagbar-issues
+:Q
+:BundleInstall
 :'<,'>q
 :help 'showmarks
-:q!
 :set runtimepath
 :set $runtimepath
 :help emotion
 :help ,nt
-:BundleInstall
-:source ~/.vim/vimrc 
-:w
 :UndotreeToggle
 :source ~/.vim/vim 
 :s
-:sp
 :'<,'>s/fn/afterGetCount/g
-:b6
-:vsp
-:b5
-:b1
 :source ~/.vim/vimrc
 :runtimepath
 :runtime
@@ -48,7 +74,6 @@ $Nov 17, 2015
 :h tagbar
 :BundleUpdate
 :'<,'>wq
-:Q
 :vso
 :set tags
 :currenttag()
@@ -64,14 +89,12 @@ $Nov 17, 2015
 :er
 :err
 :errors
-:messages
 :%s/registry\.npmjs\.org/npm\.taobao\.org\/mirrors\/npm/gc
 :%s/www\.npmjs\.org/npm\.taobao\.org\/mirrors\/npm/gc
 :%s/www\.npmjs\.org/npm\.taobao\.org\/mirrors\/npm/cg
 :%s/www\.npmjs\.org/npm\.taobao\.org\/mirrors\/npm/c
 :33
 :PluginSearchmotion
-:b4
 :Ack response test/*/
 :Ack template  test/*/
 :b11
@@ -85,6 +108,34 @@ $Nov 17, 2015
 :b7
 
 # Search String History (newest to oldest):
+?/parse
+? new
+? keyMap
+? keymap
+? '
+?// is loaded, that'll handle the require calls.
+?// call to define. Alternatively, when its commonjs plugin
+?// If Tern's requirejs plugin is loaded, it'll pick up the
+?//
+?// This one is written using a multi-module-loader wrapper
+?// (Press ctrl-. on `List` to jump to the class definition)
+?// jump to the definition of things defined in modules.
+?// Imports and exports work. You can complete module names, and
+?// Tern can do ECMAScript 6 (2015) too!
+? define
+? cmd
+? name
+? tagbar
+? truncate_width
+? truncate
+? airline
+? currenttag
+? ctags
+? truncated
+? automatic
+? jsparse
+? jsparser
+? initial
 ?/syntax
 ?/colorscheme
 ?/color
@@ -108,7 +159,6 @@ $Nov 17, 2015
 ?/getIssues
 ?/getIssuesCount
 ?/formatTime
-?//
 ?/newIssue
 ?/newBut
 ?/zzv
@@ -213,31 +263,42 @@ $Nov 17, 2015
 
 # Registers:
 "0	LINE	0
-	                   getIssue: getIssue,
+	
 ""1	LINE	0
-	,,,,,,,,,,ma
+	
 "2	LINE	0
-	vim:tw=78:ts=8:ft=help
+	  kfhfhakfhakfhkafh,se
 "3	LINE	0
 	
 "4	LINE	0
-	   First release.
+	    //maybe to export
 "5	LINE	0
-	1.0 - 2001-11-20
+	    return angular
+	    //Ëøô‰∏™Ê®°ÂùóË¥üË¥£oaÁöÑÂ§¥ÈÉ® ËæπÊ°ÜÁ≠â
+	    .module('oa.customList', [
+	            'commonService', 
+	            'ui.bootstrap', 
+	            'oa.shareData',
+	            'ui.router'])
+	            .controller('customListCtrl', customListCtrl);
+	    } 
 "6	LINE	0
-	
+	    customListCtrl.$inject = ['$scope', 'transferProto', '$state', '$timeout', '$location', '$anchorScroll', 'businessWrap', 'devDetect' ];
 "7	LINE	0
-	   Clear autocommands before making new ones.
+	
 "8	LINE	0
-	   Fixed sign staying placed if the line it was on is deleted.
+	
 "9	LINE	0
-	   Added support for the A-Z marks.
+	
 "j	CHAR	0
 	kkkjuj
 "p	CHAR	0
 	rqjkij
+"u	CHAR	0
+	375
+<irejs(["text_util", "output"], function(text, output) {  window.addEventListener("load", function() {    // Pressing alt-. on `garble` jumps to the module    var word = text.capitalize(text.garble(prompt("Hi", "")))    output.write(word)  })})Ä˝,Ä˝.jkkkkjVjjj¬ØjjjlllllllllllllllllllllhhvllldjkkkkkjkVjjjjj=jjjjjjjkkkkkkkkkkkjkhhhhhhhhhhhhhlliqu	jjkÄ˝,Ä˝.:w
 "-	CHAR	0
-	r
+	  
 
 # File marks:
 'A  1  0  /tmp/vimrc
@@ -266,252 +327,947 @@ $Nov 17, 2015
 'X  1  0  /tmp/vimrc
 'Y  1  0  /tmp/vimrc
 'Z  1  0  /tmp/vimrc
-'0  44  0  ~/.vim/.git/COMMIT_EDITMSG
-'1  12  0  ~/.vim/vimrc
-'2  43  0  ~/Workplace/newOa/index.html
-'3  285  1  /tmp/vimrc
-'4  11  0  ~/.vim/vimrc
-'5  49  4  ~/Workplace/newOa/index.html
-'6  1  0  ~/Workplace/newOa/inde
-'7  4  0  /tmp/config-err-OPIoaH
-'8  1  16  ~/Workplace/newOa/.git/COMMIT_EDITMSG
-'9  91  47  ~/Workplace/newOa/dist/js/apps/issue/issue.ctrl.js
+'0  24  0  ~/sofeware/jsctags/test.js
+'1  5  0  ~/sofeware/jsctags/test.js
+'2  1  0  ~/sofeware/jsctags/customerList.ctrl.js.bak
+'3  1  56  /tmp/main.js
+'4  16  0  /usr/local/lib/node_modules/jsctags/test/runner.js
+'5  271  0  ~/.vim/vimrc
+'6  55  0  ~/Workplace/newOa/dist/js/apps/custom/customerList.ctrl.js
+'7  53  0  ~/Workplace/newOa/dist/js/apps/custom/customerList.ctrl.js
+'8  1  0  ~/Workplace/newOa/dist/js/apps/custom/customerFollow.ctrl.js
+'9  1  0  ~/Workplace/newOa/dist/js/apps/custom/customer
 
 # Jumplist (newest first):
--'  44  0  ~/.vim/.git/COMMIT_EDITMSG
--'  1  0  ~/.vim/.git/COMMIT_EDITMSG
--'  12  0  ~/.vim/vimrc
--'  11  0  ~/.vim/vimrc
--'  43  0  ~/Workplace/newOa/index.html
--'  28  0  ~/Workplace/newOa/index.html
--'  18  0  ~/Workplace/newOa/index.html
--'  285  1  /tmp/vimrc
--'  145  2  /tmp/vimrc
--'  121  50  /tmp/vimrc
--'  22  57  /tmp/vimrc
--'  567  3  /tmp/vimrc
--'  305  1  /tmp/vimrc
--'  303  2  /tmp/vimrc
--'  302  2  /tmp/vimrc
--'  301  8  /tmp/vimrc
--'  300  15  /tmp/vimrc
--'  299  34  /tmp/vimrc
--'  273  1  /tmp/vimrc
--'  307  1  /tmp/vimrc
--'  281  1  /tmp/vimrc
--'  275  1  /tmp/vimrc
--'  173  32  /tmp/vimrc
--'  49  46  /tmp/vimrc
--'  1  0  /tmp/vimrc
--'  2  68  ~/.vim/vimrc
--'  1  42  ~/.vim/vimrc
--'  670  1  ~/.vim/vimrc
--'  668  0  ~/.vim/vimrc
--'  518  12  ~/.vim/vimrc
--'  515  12  ~/.vim/vimrc
--'  514  12  ~/.vim/vimrc
--'  469  19  ~/.vim/vimrc
--'  468  19  ~/.vim/vimrc
--'  465  19  ~/.vim/vimrc
--'  456  13  ~/.vim/vimrc
--'  454  13  ~/.vim/vimrc
--'  451  13  ~/.vim/vimrc
--'  147  36  ~/.vim/vimrc
--'  255  27  ~/.vim/vimrc
--'  196  0  ~/.vim/vimrc
--'  49  4  ~/Workplace/newOa/index.html
--'  20  4  ~/Workplace/newOa/index.html
--'  1  0  ~/Workplace/newOa/inde
--'  4  0  /tmp/config-err-OPIoaH
--'  10  0  /tmp/NERD_tree_1
--'  19  0  /tmp/NERD_tree_1
--'  1  0  /tmp/NERD_tree_1
--'  6  15  /tmp/config-err-OPIoaH
--'  1  0  /tmp/config-err-OPIoaH
--'  1  16  ~/Workplace/newOa/.git/COMMIT_EDITMSG
--'  2  0  ~/Workplace/newOa/.git/COMMIT_EDITMSG
--'  91  47  ~/Workplace/newOa/dist/js/apps/issue/issue.ctrl.js
--'  82  19  ~/Workplace/newOa/dist/js/apps/issue/issue.ctrl.js
--'  16  0  ~/Workplace/newOa/dist/js/apps/issue/issue.ctrl.js
--'  81  31  ~/Workplace/newOa/dist/js/apps/issue/issue.ctrl.js
--'  198  90  ~/Workplace/newOa/dist/js/apps/issue/issue.ctrl.js
--'  5  0  ~/Workplace/newOa/dist/js/apps/issue/issue.ctrl.js
--'  162  34  ~/Workplace/newOa/dist/js/apps/issue/issue.ctrl.js
--'  161  15  ~/Workplace/newOa/dist/js/apps/issue/issue.ctrl.js
--'  137  17  ~/Workplace/newOa/dist/js/apps/issue/issue.ctrl.js
--'  169  24  ~/Workplace/newOa/dist/js/apps/issue/issue.ctrl.js
--'  155  16  ~/Workplace/newOa/dist/js/apps/issue/issue.ctrl.js
--'  141  16  ~/Workplace/newOa/dist/js/apps/issue/issue.ctrl.js
--'  132  45  ~/Workplace/newOa/dist/js/apps/issue/issue.ctrl.js
--'  187  28  ~/Workplace/newOa/dist/js/apps/issue/issue.ctrl.js
--'  175  12  ~/Workplace/newOa/dist/js/apps/issue/issue.ctrl.js
--'  144  8  ~/Workplace/newOa/dist/js/apps/issue/issue.ctrl.js
--'  140  15  ~/Workplace/newOa/dist/js/apps/issue/issue.ctrl.js
--'  125  35  ~/Workplace/newOa/dist/js/apps/issue/issue.ctrl.js
--'  180  7  ~/Workplace/newOa/dist/js/apps/issue/issue.ctrl.js
--'  90  7  ~/Workplace/newOa/dist/js/apps/issue/issue.ctrl.js
--'  1  0  ~/Workplace/newOa/dist/js/apps/issue/issue.ctrl.js
--'  185  24  ~/Workplace/newOa/dist/js/apps/issue/issue.ctrl.js
--'  113  17  ~/Workplace/newOa/dist/js/apps/issue/issue.ctrl.js
--'  151  16  ~/Workplace/newOa/dist/js/base/utility.js
--'  209  42  ~/Workplace/newOa/dist/js/base/utility.js
--'  208  47  ~/Workplace/newOa/dist/js/base/utility.js
--'  30  21  ~/Workplace/newOa/dist/js/base/utility.js
--'  243  35  ~/Workplace/newOa/dist/js/base/utility.js
--'  52  20  ~/Workplace/newOa/dist/js/base/utility.js
--'  247  35  ~/Workplace/newOa/dist/js/base/utility.js
--'  357  12  ~/Workplace/newOa/dist/js/apps/custom/customerList.ctrl.js
--'  72  0  ~/Workplace/newOa/pages/apps/issue/issue.html
--'  1  0  ~/Workplace/newOa/pages/apps/issue/issue.html
--'  197  104  ~/Workplace/newOa/dist/js/apps/issue/issueDetail.ctrl.js
--'  11  0  ~/Workplace/newOa/dist/js/apps/issue/issueDetail.ctrl.js
--'  131  17  ~/Workplace/newOa/dist/js/apps/issue/issueDetail.ctrl.js
--'  76  0  ~/Workplace/newOa/dist/js/apps/issue/issueDetail.ctrl.js
--'  195  0  ~/Workplace/newOa/dist/js/apps/issue/issueDetail.ctrl.js
--'  69  58  ~/Workplace/newOa/pages/apps/issue/issueDetail.html
--'  30  28  ~/Workplace/newOa/dist/js/apps/issue/issueNew.ctrl.js
--'  28  43  ~/Workplace/newOa/dist/js/apps/issue/issueNew.ctrl.js
--'  26  28  ~/Workplace/newOa/dist/js/apps/issue/issueNew.ctrl.js
--'  111  0  ~/Workplace/newOa/dist/js/apps/issue/issueNew.ctrl.js
--'  5  0  ~/Workplace/newOa/dist/js/apps/issue/issueNew.ctrl.js
--'  8  0  ~/Workplace/newOa/dist/js/apps/issue/issueNew.ctrl.js
--'  10  0  ~/Workplace/newOa/dist/js/apps/issue/issueMod.ctrl.js
--'  43  0  ~/Workplace/newOa/index.html
--'  28  0  ~/Workplace/newOa/index.html
+-'  24  0  ~/sofeware/jsctags/test.js
+-'  3  2  ~/sofeware/jsctags/cu.js
+-'  395  0  ~/sofeware/jsctags/cu.js
+-'  9  13  ~/sofeware/jsctags/cu.js
+-'  398  0  ~/sofeware/jsctags/cu.js
+-'  5  0  ~/sofeware/jsctags/test.js
+-'  1  0  ~/sofeware/jsctags/cu.js
+-'  1  0  ~/sofeware/jsctags/customerList.ctrl.js.bak
+-'  1  56  /tmp/main.js
+-'  4  9  /tmp/text_util.js
+-'  9  8  /tmp/text_util.js
+-'  11  0  /tmp/text_util.js
+-'  28  33  /tmp/test.js
+-'  7  1  /tmp/main.js
+-'  37  0  /tmp/test.js
+-'  1  9  /tmp/text_util.js
+-'  6  5  /tmp/main.js
+-'  22  62  /tmp/test.js
+-'  27  0  /tmp/test.js
+-'  70  0  /tmp/test.js
+-'  1  0  /tmp/test.js
+-'  16  0  /usr/local/lib/node_modules/jsctags/test/runner.js
+-'  6  0  /usr/local/lib/node_modules/jsctags/test/runner.js
+-'  15  4  /usr/local/lib/node_modules/jsctags/test/runner.js
+-'  133  87  /usr/local/lib/node_modules/jsctags/test/runner.js
+-'  18  0  /usr/local/lib/node_modules/jsctags/test/runner.js
+-'  117  10  /usr/local/lib/node_modules/jsctags/test/runner.js
+-'  137  4  /usr/local/lib/node_modules/jsctags/test/runner.js
+-'  111  18  /usr/local/lib/node_modules/jsctags/test/runner.js
+-'  13  23  /usr/local/lib/node_modules/jsctags/package.json
+-'  149  6  /usr/local/lib/node_modules/jsctags/test/runner.js
+-'  24  3  /usr/local/lib/node_modules/jsctags/package.json
+-'  29  33  /usr/local/lib/node_modules/jsctags/examples/findref.md
+-'  290  0  /usr/local/lib/node_modules/jsctags/node_modules/tern/plugin/angular.js
+-'  229  27  /usr/local/lib/node_modules/jsctags/node_modules/tern/plugin/angular.js
+-'  224  22  /usr/local/lib/node_modules/jsctags/node_modules/tern/plugin/angular.js
+-'  223  27  /usr/local/lib/node_modules/jsctags/node_modules/tern/plugin/angular.js
+-'  222  27  /usr/local/lib/node_modules/jsctags/node_modules/tern/plugin/angular.js
+-'  221  23  /usr/local/lib/node_modules/jsctags/node_modules/tern/plugin/angular.js
+-'  215  11  /usr/local/lib/node_modules/jsctags/node_modules/tern/plugin/angular.js
+-'  214  75  /usr/local/lib/node_modules/jsctags/node_modules/tern/plugin/angular.js
+-'  200  87  /usr/local/lib/node_modules/jsctags/node_modules/tern/plugin/angular.js
+-'  181  45  /usr/local/lib/node_modules/jsctags/node_modules/tern/plugin/angular.js
+-'  180  42  /usr/local/lib/node_modules/jsctags/node_modules/tern/plugin/angular.js
+-'  170  23  /usr/local/lib/node_modules/jsctags/node_modules/tern/plugin/angular.js
+-'  168  50  /usr/local/lib/node_modules/jsctags/node_modules/tern/plugin/angular.js
+-'  167  15  /usr/local/lib/node_modules/jsctags/node_modules/tern/plugin/angular.js
+-'  166  13  /usr/local/lib/node_modules/jsctags/node_modules/tern/plugin/angular.js
+-'  157  35  /usr/local/lib/node_modules/jsctags/node_modules/tern/plugin/angular.js
+-'  155  40  /usr/local/lib/node_modules/jsctags/node_modules/tern/plugin/angular.js
+-'  154  19  /usr/local/lib/node_modules/jsctags/node_modules/tern/plugin/angular.js
+-'  153  15  /usr/local/lib/node_modules/jsctags/node_modules/tern/plugin/angular.js
+-'  138  22  /usr/local/lib/node_modules/jsctags/node_modules/tern/plugin/angular.js
+-'  65  49  /usr/local/lib/node_modules/jsctags/node_modules/tern/plugin/angular.js
+-'  58  43  /usr/local/lib/node_modules/jsctags/node_modules/tern/plugin/angular.js
+-'  55  29  /usr/local/lib/node_modules/jsctags/node_modules/tern/plugin/angular.js
+-'  54  27  /usr/local/lib/node_modules/jsctags/node_modules/tern/plugin/angular.js
+-'  51  54  /usr/local/lib/node_modules/jsctags/node_modules/tern/plugin/angular.js
+-'  49  25  /usr/local/lib/node_modules/jsctags/node_modules/tern/plugin/angular.js
+-'  39  26  /usr/local/lib/node_modules/jsctags/node_modules/tern/plugin/angular.js
+-'  31  50  /usr/local/lib/node_modules/jsctags/node_modules/tern/plugin/angular.js
+-'  30  8  /usr/local/lib/node_modules/jsctags/node_modules/tern/plugin/angular.js
+-'  29  36  /usr/local/lib/node_modules/jsctags/node_modules/tern/plugin/angular.js
+-'  26  28  /usr/local/lib/node_modules/jsctags/node_modules/tern/plugin/angular.js
+-'  25  48  /usr/local/lib/node_modules/jsctags/node_modules/tern/plugin/angular.js
+-'  24  8  /usr/local/lib/node_modules/jsctags/node_modules/tern/plugin/angular.js
+-'  23  36  /usr/local/lib/node_modules/jsctags/node_modules/tern/plugin/angular.js
+-'  1  0  /usr/local/lib/node_modules/jsctags/node_modules/tern/plugin/angular.js
+-'  492  44  /usr/local/lib/node_modules/jsctags/node_modules/tern/plugin/angular.js
+-'  490  49  /usr/local/lib/node_modules/jsctags/node_modules/tern/plugin/angular.js
+-'  439  36  /usr/local/lib/node_modules/jsctags/node_modules/tern/plugin/angular.js
+-'  436  10  /usr/local/lib/node_modules/jsctags/node_modules/tern/plugin/angular.js
+-'  271  0  ~/.vim/vimrc
+-'  55  0  ~/Workplace/newOa/dist/js/apps/custom/customerList.ctrl.js
+-'  1  0  ~/Workplace/newOa/dist/js/apps/custom/__Tagbar__
+-'  2  0  ~/Workplace/newOa/dist/js/apps/custom/__Tagbar__
+-'  57  8  ~/Workplace/newOa/dist/js/apps/custom/customerList.ctrl.js
+-'  12  31  /usr/local/lib/node_modules/jsctags/node_modules/tern/plugin/requirejs.js
+-'  351  6  /usr/local/lib/node_modules/jsctags/node_modules/tern/plugin/requirejs.js
+-'  291  35  /usr/local/lib/node_modules/jsctags/node_modules/tern/plugin/requirejs.js
+-'  179  4  /usr/local/lib/node_modules/jsctags/node_modules/tern/plugin/requirejs.js
+-'  145  0  /usr/local/lib/node_modules/jsctags/node_modules/tern/plugin/requirejs.js
+-'  178  36  /usr/local/lib/node_modules/jsctags/node_modules/tern/plugin/requirejs.js
+-'  1  0  /usr/local/lib/node_modules/jsctags/node_modules/tern/plugin/requirejs.js
+-'  16  0  /usr/local/lib/node_modules/jsctags/test/runner.js
+-'  6  0  /usr/local/lib/node_modules/jsctags/test/runner.js
+-'  15  4  /usr/local/lib/node_modules/jsctags/test/runner.js
+-'  133  87  /usr/local/lib/node_modules/jsctags/test/runner.js
+-'  18  0  /usr/local/lib/node_modules/jsctags/test/runner.js
+-'  117  10  /usr/local/lib/node_modules/jsctags/test/runner.js
+-'  137  4  /usr/local/lib/node_modules/jsctags/test/runner.js
+-'  111  18  /usr/local/lib/node_modules/jsctags/test/runner.js
+-'  13  23  /usr/local/lib/node_modules/jsctags/package.json
+-'  149  6  /usr/local/lib/node_modules/jsctags/test/runner.js
+-'  24  3  /usr/local/lib/node_modules/jsctags/package.json
+-'  29  33  /usr/local/lib/node_modules/jsctags/examples/findref.md
+-'  290  0  /usr/local/lib/node_modules/jsctags/node_modules/tern/plugin/angular.js
+-'  229  27  /usr/local/lib/node_modules/jsctags/node_modules/tern/plugin/angular.js
+-'  224  22  /usr/local/lib/node_modules/jsctags/node_modules/tern/plugin/angular.js
 
 # History of marks within files (newest to oldest):
 
-> ~/.vim/.git/COMMIT_EDITMSG
-	"	44	0
-
-> ~/.vim/vimrc
-	"	12	0
-	^	670	1
-	.	670	0
+> ~/sofeware/jsctags/cu.js
+	"	26	35
+	^	394	0
+	.	394	0
+	+	397	0
 	+	1	0
-	+	21	0
-	+	188	33
-	+	188	0
-	+	186	0
-	+	660	0
-	+	660	0
-	+	660	35
-	+	660	0
-	+	660	0
-	+	660	0
-	+	660	0
-	+	660	34
-	+	660	0
-	+	660	0
-	+	660	0
-	+	659	0
-	+	660	0
-	+	660	0
-	+	660	0
-	+	186	0
-	+	160	0
-	+	104	0
-	+	260	0
-	+	258	48
-	+	258	0
-	+	259	0
-	+	258	0
-	+	258	0
-	+	248	0
-	+	255	0
-	+	257	0
-	+	249	0
-	+	250	0
-	+	251	0
-	+	252	0
-	+	253	0
-	+	254	0
-	+	256	0
-	+	258	0
-	+	256	0
-	+	262	0
-	+	295	0
-	+	288	0
-	+	296	0
-	+	298	0
-	+	297	10
-	+	296	0
-	+	21	0
-	+	289	0
-	+	295	0
-	+	258	48
-	+	244	0
-	+	81	10
-	+	258	0
-	+	256	0
-	+	258	0
-	+	194	0
-	+	237	0
-	+	194	0
-	+	237	0
-	+	237	0
-	+	194	0
-	+	237	0
-	+	270	0
-	+	270	0
-	+	274	0
-	+	305	0
-	+	97	0
-	+	196	0
-	+	197	0
-	+	669	0
-	+	670	0
+	+	2	0
+	+	2	0
+	+	9	9
+	+	2	0
+	+	1	19
+	+	11	0
+	+	398	0
+	+	395	2
+	+	11	11
+	+	11	11
+	+	12	0
+	+	11	10
+	+	395	0
+	+	395	0
+	+	398	0
+	+	397	0
+	+	395	0
+	+	11	0
+	+	10	0
+	+	2	0
+	+	395	0
+	+	395	0
+	+	1	0
+	+	395	0
+	+	395	0
+	+	395	0
+	+	395	0
+	+	395	0
+	+	394	0
 
-> ~/Workplace/newOa/index.html
-	"	43	0
-	^	57	5
-	.	57	5
-	+	57	5
-	a	59	4
-	h	18	0
-	m	59	13
+> ~/sofeware/jsctags/ControlP
+	"	10	0
+	.	2	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	2	0
 
-> /tmp/vimrc
-	"	285	1
-	^	79	21
-	.	273	0
-	+	49	0
-	+	80	0
-	+	84	0
-	+	83	0
-	+	79	20
-	+	275	0
-	+	307	0
-	+	274	0
-	+	273	0
-	a	1	0
-	b	1	0
-	c	1	0
-	d	1	0
-	e	1	0
-	f	1	0
-	g	1	0
-	h	1	0
-	i	1	0
-	j	1	0
-	k	1	0
-	l	1	0
-	m	91	0
-	n	1	0
-	o	1	0
-	p	1	0
-	q	1	0
-	r	1	0
-	s	1	0
-	t	1	0
-	u	1	0
-	v	1	0
-	w	1	0
-	x	1	0
-	y	1	0
-	z	1	0
+> ~/sofeware/jsctags/test.js
+	"	24	0
+
+> ~/sofeware/jsctags/-MiniBufExplorer-
+	"	1	9
+	.	2	0
+	+	2	0
+	+	2	0
+	+	2	0
+	+	2	0
+	+	2	0
+	+	2	0
+	+	2	0
+	+	2	0
+	+	2	0
+	+	2	0
+	+	2	0
+	+	2	0
+	+	2	0
+	+	2	0
+	+	2	0
+	+	2	0
+	+	2	0
+	+	2	0
+	+	2	0
+	+	2	0
+	+	2	0
+	+	2	0
+	+	2	0
+	+	2	0
+	+	2	0
+	+	2	0
+	+	2	0
+	+	2	0
+	+	2	0
+	+	2	0
+	+	2	0
+	+	2	0
+	+	2	0
+	+	2	0
+	+	2	0
+	+	2	0
+	+	2	0
+	+	2	0
+	+	2	0
+	+	2	0
+	+	2	0
+	+	2	0
+	+	2	0
+	+	2	0
+	+	2	0
+	+	2	0
+	+	2	0
+	+	2	0
+	+	2	0
+	+	2	0
+	+	2	0
+	+	2	0
+	+	2	0
+	+	2	0
+	+	2	0
+	+	2	0
+	+	2	0
+	+	2	0
+	+	2	0
+
+> ~/sofeware/jsctags/__Tagbar__
+	"	1	0
+	.	2	0
+	+	2	0
+	+	2	0
+	+	2	0
+	+	2	0
+	+	2	0
+	+	2	0
+	+	2	0
+	+	2	0
+	+	2	0
+	+	2	0
+	+	2	0
+	+	2	0
+	+	2	0
+	+	2	0
+	+	2	0
+	+	2	0
+	+	2	0
+
+> ~/sofeware/jsctags/undotree_2
+	"	3	1
+	.	3	0
+	+	44	0
+	+	44	0
+	+	44	0
+	+	44	0
+	+	44	0
+	+	44	0
+	+	44	0
+	+	3	0
+
+> ~/sofeware/jsctags/diffpanel_3
+	"	1	0
+	.	6	0
+	+	6	0
+	+	6	0
+	+	6	0
+	+	6	0
+	+	6	0
+	+	6	0
+	+	6	0
+
+> ~/.vim/.git/COMMIT_EDITMSG
+	"	1	16
+	^	1	17
+	.	1	16
+	+	1	16
+
+> ~/sofeware/jsctags/src/condenser.js
+	"	28	4
+
+> ~/sofeware/jsctags/NERD_tree_1
+	"	13	0
+	.	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+
+> ~/sofeware/jsctags/src/parser.js
+	"	141	17
+
+> ~/sofeware/jsctags/bin/jsctags
+	"	61	1
+
+> ~/sofeware/tern/doc/demo/demo.js
+	"	53	0
+
+> ~/sofeware/tern/doc/demo/__Tagbar__
+	"	8	0
+	.	25	0
+	+	25	0
+	+	25	0
+	+	25	0
+	+	25	0
+	+	25	0
+	+	25	0
+	+	25	0
+	+	25	0
+	+	25	0
+	+	25	0
+	+	25	0
+	+	25	0
+
+> ~/sofeware/tern/doc/demo/-MiniBufExplorer-
+	"	1	0
+	.	2	0
+	+	2	0
+	+	2	0
+	+	2	0
+	+	2	0
+	+	2	0
+	+	2	0
+	+	2	0
+
+> ~/sofeware/tern/doc/demo/ControlP
+	"	1	0
+	.	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+
+> ~/sofeware/tern/doc/demo/index.html
+	"	24	69
+
+> ~/Workplace/newOa/.tern-project
+	"	15	45
+	^	13	40
+	.	37	17
+	+	41	44
+	+	2	0
+	+	38	13
+	+	39	26
+	+	11	0
+	+	38	0
+	+	38	0
+	+	11	0
+	+	12	0
+	+	37	0
+	+	38	0
+	+	13	0
+	+	37	0
+	+	13	16
+	+	11	46
+	+	14	20
+	+	15	20
+	+	16	20
+	+	17	20
+	+	18	20
+	+	19	20
+	+	20	20
+	+	21	20
+	+	22	20
+	+	23	20
+	+	24	20
+	+	25	20
+	+	26	20
+	+	27	20
+	+	28	20
+	+	29	20
+	+	30	20
+	+	31	20
+	+	32	20
+	+	33	20
+	+	33	20
+	+	34	20
+	+	35	20
+	+	36	20
+	+	37	20
+	+	13	40
+	+	37	17
+
+> ~/Workplace/newOa/ControlP
+	"	10	0
+	.	2	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	2	0
+
+> ~/Workplace/newOa/main.min.js
+	"	5	0
 
 > ~/Workplace/newOa/-MiniBufExplorer-
+	"	1	32
+	.	2	0
+	+	2	0
+	+	2	0
+	+	2	0
+	+	2	0
+	+	2	0
+	+	2	0
+	+	2	0
+	+	2	0
+	+	2	0
+	+	2	0
+	+	2	0
+	+	2	0
+	+	2	0
+	+	2	0
+	+	2	0
+	+	2	0
+	+	2	0
+	+	2	0
+	+	2	0
+	+	2	0
+	+	2	0
+	+	2	0
+	+	2	0
+	+	2	0
+	+	2	0
+	+	2	0
+	+	2	0
+	+	2	0
+	+	2	0
+	+	2	0
+	+	2	0
+	+	2	0
+	+	2	0
+	+	2	0
+	+	2	0
+	+	2	0
+	+	2	0
+	+	2	0
+	+	2	0
+	+	2	0
+	+	2	0
+	+	2	0
+	+	2	0
+	+	2	0
+	+	2	0
+	+	2	0
+	+	2	0
+	+	2	0
+	+	2	0
+	+	2	0
+	+	2	0
+	+	2	0
+	+	2	0
+	+	2	0
+	+	2	0
+	+	2	0
+	+	2	0
+	+	2	0
+	+	2	0
+	+	2	0
+	+	2	0
+	+	2	0
+	+	2	0
+	+	2	0
+	+	2	0
+	+	2	0
+	+	2	0
+	+	2	0
+	+	2	0
+	+	2	0
+	+	2	0
+	+	2	0
+	+	2	0
+	+	2	0
+	+	2	0
+	+	2	0
+	+	2	0
+	+	2	0
+	+	2	0
+	+	2	0
+	+	2	0
+	+	2	0
+	+	2	0
+	+	2	0
+	+	2	0
+	+	2	0
+	+	2	0
+	+	2	0
+	+	2	0
+	+	2	0
+	+	2	0
+	+	2	0
+	+	2	0
+	+	2	0
+	+	2	0
+	+	2	0
+	+	2	0
+	+	2	0
+	+	2	0
+	+	2	0
+
+> ~/Workplace/newOa/dist/js/apps/custom/customerList.ctrl.js
+	"	166	21
+	^	13	0
+	.	13	0
+	+	70	0
+	+	13	0
+	e	48	8
+	q	48	8
+
+> ~/Workplace/newOa/__Tagbar__
+	"	1	0
+	.	2	0
+	+	97	0
+	+	97	0
+	+	97	0
+	+	97	0
+	+	97	0
+	+	97	0
+	+	97	0
+	+	97	0
+	+	97	0
+	+	97	0
+	+	97	0
+	+	97	0
+	+	97	0
+	+	97	0
+	+	97	0
+	+	97	0
+	+	97	0
+	+	97	0
+	+	97	0
+	+	97	0
+	+	97	0
+	+	97	0
+	+	97	0
+	+	97	0
+	+	97	0
+	+	97	0
+	+	97	0
+	+	97	0
+	+	97	0
+	+	97	0
+	+	97	0
+	+	97	0
+	+	97	0
+	+	97	0
+	+	97	0
+	+	97	0
+	+	97	0
+	+	97	0
+	+	97	0
+	+	97	0
+	+	97	0
+	+	97	0
+	+	97	0
+	+	97	0
+	+	97	0
+	+	97	0
+	+	97	0
+	+	97	0
+	+	97	0
+	+	97	0
+	+	97	0
+	+	97	0
+	+	97	0
+	+	97	0
+	+	92	0
+	+	92	0
+	+	92	0
+	+	92	0
+	+	92	0
+	+	92	0
+	+	92	0
+	+	92	0
+	+	92	0
+	+	92	0
+	+	92	0
+	+	92	0
+	+	92	0
+	+	92	0
+	+	92	0
+	+	92	0
+	+	92	0
+	+	92	0
+	+	92	0
+	+	92	0
+	+	92	0
+	+	92	0
+	+	92	0
+	+	92	0
+	+	92	0
+	+	92	0
+	+	92	0
+	+	92	0
+	+	92	0
+	+	92	0
+	+	92	0
+	+	60	0
+	+	60	0
+	+	29	0
+	+	29	0
+	+	2	0
+	+	2	0
+	+	2	0
+	+	2	0
+	+	2	0
+	+	2	0
+	+	2	0
+	+	2	0
+	+	2	0
+	+	2	0
+	+	2	0
+
+> ~/Workplace/newOa/dist/js/base/utility.js
+	"	7	0
+	^	218	13
+	.	218	12
+	+	222	0
+	+	206	22
+	+	218	11
+	+	207	0
+	+	218	0
+	+	207	45
+	+	208	86
+	+	211	0
+	+	219	11
+	+	208	72
+	+	209	0
+	+	210	0
+	+	209	76
+	+	210	0
+	+	209	94
+	+	219	22
+	+	221	11
+	+	220	106
+	+	221	0
+	+	212	48
+	+	213	47
+	+	214	47
+	+	215	58
+	+	216	90
+	+	217	85
+	+	222	24
+	+	227	11
+	+	223	0
+	+	227	0
+	+	228	23
+	+	229	11
+	+	174	0
+	+	260	16
+	+	241	15
+	+	240	0
+	+	241	14
+	+	221	0
+	+	242	0
+	+	235	0
+	+	241	14
+	+	236	25
+	+	237	24
+	+	239	26
+	+	237	0
+	+	198	0
+	+	199	0
+	+	178	11
+	+	178	29
+	+	186	39
+	+	188	34
+	+	193	0
+	+	196	22
+	+	188	29
+	+	203	0
+	+	188	26
+	+	203	57
+	+	231	48
+	+	232	12
+	+	227	12
+	+	221	12
+	+	218	12
+
+> ~/sofeware/jsctags/customerList.ctrl.js.bak
+	"	1	0
+
+> /tmp/test.js
+	"	28	33
+	^	2	1
+	.	2	0
+	+	1	30
+	+	1	4
+	+	1	8
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	18
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	19
+	+	1	17
+	+	1	16
+	+	1	0
+	+	1	2
+	+	1	9
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	25
+	+	1	65
+	+	1	52
+	+	1	62
+	+	1	56
+	+	1	71
+	+	1	52
+	+	1	57
+	+	1	63
+	+	1	33
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	26
+	+	1	34
+	+	1	26
+	+	1	36
+	+	1	53
+	+	1	38
+	+	1	49
+	+	1	77
+	+	1	55
+	+	1	111
+	+	1	77
+	+	1	67
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	54
+	+	1	46
+	+	1	70
+	+	1	0
+	+	1	124
+	+	1	111
+	+	1	135
+	+	1	86
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	2
+	+	1	0
+	+	1	1
+	+	1	0
+	+	1	0
+	+	2	14
+	+	3	62
+	+	4	47
+	+	5	53
+	+	6	45
+	+	8	54
+	+	9	31
+	+	12	41
+	+	13	47
+	+	25	74
+	+	26	42
+	+	31	51
+	+	41	63
+	+	45	48
+	+	50	59
+	+	53	87
+	+	58	121
+	+	61	87
+	+	70	107
+	+	70	0
+	+	12	0
+	+	70	30
+	+	2	0
+
+> /tmp/__Tagbar__
 	"	1	0
 	.	2	0
 	+	2	0
@@ -577,160 +1333,596 @@ $Nov 17, 2015
 	+	2	0
 	+	2	0
 	+	2	0
-	+	2	0
-	+	2	0
-	+	2	0
-	+	2	0
-	+	2	0
-	+	2	0
-	+	2	0
-	+	2	0
-	+	2	0
-	+	2	0
-	+	2	0
-	+	2	0
-	+	2	0
-	+	2	0
-	+	2	0
-	+	2	0
-	+	2	0
-	+	2	0
-	+	2	0
-	+	2	0
-	+	2	0
-	+	2	0
-	+	2	0
-	+	2	0
-	+	2	0
-	+	2	0
-	+	2	0
-	+	2	0
-	+	2	0
-	+	2	0
-	+	2	0
-	+	2	0
-	+	2	0
-	+	2	0
-	+	2	0
-	+	2	0
-	+	2	0
-
-> ~/.vim/doc/showmarks.txt
-	"	74	46
-	.	265	0
-	+	265	0
 
 > /tmp/-MiniBufExplorer-
+	"	1	11
+	.	2	0
+	+	2	0
+	+	2	0
+	+	2	0
+	+	2	0
+	+	2	0
+	+	2	0
+	+	2	0
+	+	2	0
+	+	2	0
+	+	2	0
+	+	2	0
+	+	2	0
+	+	2	0
+	+	2	0
+	+	2	0
+	+	2	0
+	+	2	0
+	+	2	0
+	+	2	0
+	+	2	0
+	+	2	0
+	+	2	0
+	+	2	0
+	+	2	0
+	+	2	0
+	+	2	0
+	+	2	0
+	+	2	0
+	+	2	0
+	+	2	0
+	+	2	0
+	+	2	0
+	+	2	0
+	+	2	0
+	+	2	0
+	+	2	0
+	+	2	0
+	+	2	0
+	+	2	0
+	+	2	0
+	+	2	0
+	+	2	0
+	+	2	0
+	+	2	0
+	+	2	0
+
+> /tmp/main.js
+	"	1	56
+	^	1	29
+	.	1	28
+	+	1	54
+	+	2	46
+	+	4	70
+	+	7	20
+	+	7	18
+	+	2	0
+	+	1	28
+
+> /tmp/text_util.js
+	"	4	9
+	^	1	15
+	.	1	14
+	+	1	5
+	+	2	10
+	+	4	41
+	+	5	70
+	+	9	55
+	+	10	82
+	+	11	98
+	+	15	58
+	+	1	6
+	+	15	0
+	+	2	0
+	+	15	1
+	+	1	0
+	+	2	0
+	+	1	14
+
+> /usr/local/lib/node_modules/jsctags/node_modules/tern/plugin/requirejs.js
+	"	12	31
+
+> /tmp/.tern_project
+	"	13	26
+	.	11	29
+	+	16	0
+	+	1	0
+	+	12	0
+	+	11	29
+
+> /usr/local/lib/node_modules/jsctags/node_modules/tern/plugin/angular.js
+	"	290	0
+
+> /usr/local/lib/node_modules/jsctags/NERD_tree_1
+	"	36	3
+	.	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+
+> /usr/local/lib/node_modules/jsctags/-MiniBufExplorer-
+	"	1	45
+	.	2	0
+	+	2	0
+	+	2	0
+	+	2	0
+	+	2	0
+	+	2	0
+	+	2	0
+	+	2	0
+	+	2	0
+	+	2	0
+	+	2	0
+	+	2	0
+	+	2	0
+	+	2	0
+	+	2	0
+	+	2	0
+	+	2	0
+	+	2	0
+	+	2	0
+	+	2	0
+	+	2	0
+	+	2	0
+
+> /usr/local/lib/node_modules/jsctags/examples/findref.md
+	"	29	33
+
+> /usr/local/lib/node_modules/jsctags/package.json
+	"	36	0
+	^	36	0
+	.	35	28
+	+	31	14
+	+	35	28
+
+> /usr/local/lib/node_modules/jsctags/test/runner.js
+	"	16	0
+	.	19	13
+	+	19	13
+
+> /usr/local/lib/node_modules/jsctags/__Tagbar__
+	"	11	2
+	.	29	0
+	+	29	0
+	+	29	0
+
+> ~/.vim/bundle/tern_for_vim/package.json
+	"	1	0
+
+> ~/.vim/bundle/tern_for_vim/NERD_tree_1
+	"	17	5
+	.	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+
+> ~/.vim/bundle/tern_for_vim/-MiniBufExplorer-
+	"	1	47
+	.	2	0
+	+	2	0
+	+	2	0
+	+	2	0
+	+	2	0
+	+	2	0
+	+	2	0
+	+	2	0
+	+	2	0
+	+	2	0
+
+> ~/.vim/bundle/tern_for_vim/vim_config.json
+	"	10	24
+
+> ~/.vim/bundle/tern_for_vim/autoload/tern.vim
+	"	88	0
+
+> ~/.vim/bundle/tern_for_vim/script/tern.py
+	"	101	37
+
+> ~/sofeware/jsctags/c.js
+	"	3	13
+	^	2	14
+	.	2	13
+	+	6	0
+	+	5	11
+	+	6	0
+	+	2	13
+
+> /usr/local/lib/node_modules/jsctags/test/cases/arguments.js
+	"	3	0
+
+> /usr/local/lib/node_modules/jsctags/test/cases/NERD_tree_1
+	"	6	0
+	.	1	0
+	+	1	0
+
+> /usr/local/lib/node_modules/jsctags/test/cases/-MiniBufExplorer-
+	"	1	87
+	.	2	0
+	+	2	0
+	+	2	0
+	+	2	0
+	+	2	0
+	+	2	0
+	+	2	0
+	+	2	0
+	+	2	0
+	+	2	0
+	+	2	0
+	+	2	0
+	+	2	0
+	+	2	0
+	+	2	0
+	+	2	0
+	+	2	0
+
+> /usr/local/lib/node_modules/jsctags/test/cases/autothis.js
+	"	11	0
+
+> /usr/local/lib/node_modules/jsctags/test/cases/browser.js
+	"	1	0
+
+> /usr/local/lib/node_modules/jsctags/test/cases/builtins.js
+	"	55	0
+
+> /usr/local/lib/node_modules/jsctags/test/cases/builtins.json
+	"	1	0
+
+> /usr/local/lib/node_modules/jsctags/test/cases/_.json
+	"	2752	0
+
+> /usr/local/lib/node_modules/jsctags/test/cases/_.tags
+	"	210	0
+
+> ~/sofeware/jsctags/customerList.ctrl.js
+	"	2	0
+	^	2	17
+	.	2	16
+	+	1	0
+	+	5	1
+	+	5	0
+	+	5	0
+	+	3	11
+	+	1	0
+	+	2	16
+
+> /usr/local/lib/node_modules/jsctags/.istanbul.yml
+	"	1	0
+
+> ~/.vim/vimrc
+	"	271	0
+	^	274	0
+	.	273	0
+	+	315	0
+	+	317	0
+	+	319	6
+	+	320	6
+	+	320	6
+	+	320	6
+	+	320	6
+	+	319	12
+	+	318	14
+	+	320	0
+	+	318	0
+	+	317	0
+	+	318	0
+	+	319	0
+	+	320	0
+	+	283	0
+	+	275	0
+	+	275	0
+	+	265	51
+	+	270	0
+	+	266	0
+	+	267	0
+	+	268	31
+	+	267	31
+	+	275	0
+	+	271	0
+	+	270	0
+	+	271	0
+	+	270	0
+	+	335	7
+	+	336	7
+	+	337	7
+	+	328	0
+	+	330	16
+	+	329	20
+	+	321	45
+	+	324	0
+	+	325	0
+	+	326	0
+	+	327	0
+	+	326	56
+	+	316	0
+	+	316	0
+	+	315	0
+	+	315	0
+	+	315	0
+	+	339	0
+	+	272	0
+	+	273	0
+	+	273	0
+
+> /usr/local/lib/node_modules/jsctags/node_modules/tern/defs/jquery.json
+	"	94	37
+
+> ~/Workplace/newOa/dist/js/apps/custom/__Tagbar__
+	"	1	0
+	.	2	0
+	+	67	0
+	+	67	0
+	+	67	0
+	+	67	0
+	+	67	0
+	+	67	0
+	+	34	0
+	+	2	0
+	+	2	0
+
+> ~/Workplace/newOa/dist/js/apps/custom/-MiniBufExplorer-
+	"	1	25
+	.	2	0
+	+	2	0
+	+	2	0
+	+	2	0
+	+	2	0
+	+	2	0
+	+	2	0
+	+	2	0
+	+	2	0
+	+	2	0
+	+	2	0
+	+	2	0
+	+	2	0
+	+	2	0
+	+	2	0
+	+	2	0
+	+	2	0
+	+	2	0
+	+	2	0
+	+	2	0
+	+	2	0
+	+	2	0
+	+	2	0
+	+	2	0
+	+	2	0
+	+	2	0
+	+	2	0
+	+	2	0
+	+	2	0
+	+	2	0
+	+	2	0
+	+	2	0
+	+	2	0
+	+	2	0
+	+	2	0
+	+	2	0
+	+	2	0
+	+	2	0
+	+	2	0
+	+	2	0
+	+	2	0
+	+	2	0
+	+	2	0
+	+	2	0
+	+	2	0
+	+	2	0
+	+	2	0
+	+	2	0
+	+	2	0
+	+	2	0
+	+	2	0
+	+	2	0
+	+	2	0
+	+	2	0
+	+	2	0
+	+	2	0
+	+	2	0
+
+> ~/sofeware/jsctags/readme.md
+	"	76	0
+	^	34	1
+	.	34	0
+	+	34	0
+
+> ~/sofeware/jsctags/bin/xjsctags
+	"	22	0
+
+> ~/sofeware/jsctags/package.json
+	"	16	4
+
+> /usr/local/bin/jsctags
+	"	5	0
+
+> ~/Workplace/newOa/dist/js/apps/custom/tags
+	"	7	0
+
+> ~/.vim/bundle/tagbar/doc/tagbar.txt
+	"	889	0
+
+> ~/.vim/-MiniBufExplorer-
 	"	1	10
 	.	2	0
 	+	2	0
 	+	2	0
 	+	2	0
 	+	2	0
-
-> ~/Workplace/newOa/ControlP
-	"	5	0
-	.	2	0
-	+	1	0
-	+	1	0
-	+	1	0
-	+	1	0
-	+	1	0
-	+	1	0
-	+	1	0
-	+	1	0
-	+	1	0
-	+	1	0
-	+	1	0
-	+	1	0
-	+	1	0
-	+	1	0
-	+	1	0
-	+	1	0
-	+	1	0
-	+	1	0
-	+	1	0
-	+	1	0
-	+	1	0
-	+	1	0
-	+	1	0
-	+	1	0
-	+	1	0
-	+	1	0
-	+	1	0
-	+	1	0
-	+	1	0
-	+	1	0
-	+	1	0
-	+	1	0
-	+	1	0
-	+	1	0
-	+	1	0
-	+	1	0
-	+	1	0
-	+	1	0
-	+	1	0
-	+	1	0
-	+	1	0
-	+	1	0
-	+	1	0
-	+	1	0
-	+	1	0
-	+	1	0
-	+	1	0
-	+	1	0
-	+	1	0
-	+	1	0
-	+	1	0
-	+	1	0
-	+	1	0
-	+	1	0
-	+	1	0
-	+	1	0
-	+	1	0
-	+	1	0
-	+	1	0
-	+	1	0
-	+	1	0
-	+	1	0
-	+	1	0
-	+	1	0
-	+	1	0
-	+	1	0
-	+	1	0
-	+	1	0
-	+	1	0
-	+	1	0
-	+	1	0
-	+	1	0
-	+	1	0
-	+	1	0
-	+	1	0
-	+	1	0
-	+	1	0
-	+	1	0
-	+	1	0
-	+	1	0
-	+	1	0
-	+	1	0
-	+	1	0
-	+	1	0
-	+	1	0
-	+	1	0
-	+	1	0
-	+	1	0
-	+	1	0
-	+	1	0
-	+	1	0
-	+	1	0
-	+	1	0
-	+	1	0
-	+	1	0
-	+	1	0
-	+	1	0
-	+	1	0
-	+	1	0
 	+	2	0
+	+	2	0
+
+> ~/.vim/bundle/vim-airline/doc/airline.txt
+	"	232	0
+
+> ~/sofeware/jsctags/contributing.md
+	"	7	0
+
+> ~/sofeware/jsctags/examples/arguments.md
+	"	1	0
+
+> ~/sofeware/jsctags/examples/NERD_tree_1
+	"	20	0
+	.	1	0
+	+	1	0
+
+> ~/sofeware/jsctags/examples/-MiniBufExplorer-
+	"	1	31
+	.	2	0
+	+	2	0
+	+	2	0
+	+	2	0
+	+	2	0
+	+	2	0
+	+	2	0
+	+	2	0
+
+> ~/sofeware/jsctags/examples/autothis.md
+	"	75	0
+
+> ~/sofeware/jsctags/examples/global_this.md
+	"	4	0
+
+> ~/Workplace/newOa/dist/js/apps/custom/customerFollow.ctrl.js
+	"	1	0
+
+> ~/Workplace/newOa/dist/js/apps/custom/customer
+	"	1	0
+
+> ~/sofeware/doctorjs/Makefile
+	"	18	7
+	^	14	63
+	.	15	1
+	+	14	51
+	+	15	21
+	+	14	41
+	+	13	66
+	+	14	62
+	+	15	1
+
+> ~/sofeware/mydoctorjs/.git/COMMIT_EDITMSG
+	"	1	11
+	^	1	12
+	.	1	11
+	+	1	11
+
+> ~/sofeware/mydoctorjs/.git/config
+	"	2	0
+
+> ~/sofeware/mydoctorjs/.gitignore
+	"	1	0
+
+> ~/sofeware/mydoctorjs/lib/jsctags/ctags/index.js
+	"	46	0
+	.	46	0
+	+	46	0
+
+> ~/sofeware/doctorjs/lib/jsctags/ctags/index.js
+	"	50	0
+	.	46	0
+	+	46	0
+
+> /usr/local/lib/node_modules/jsctags/src/local-scope/index.js
+	"	68	6
+
+> /usr/local/lib/node_modules/jsctags/src/ctags.js
+	"	10	21
+
+> ~/.zshrc
+	"	91	0
+	^	92	47
+	.	92	47
+	+	87	60
+	+	90	30
+	+	94	0
+	+	92	47
+
+> ~/sofeware/doctorjs/README.md
+	"	17	0
+
+> ~/.ctags
+	"	2	0
+	^	11	61
+	.	11	61
+	+	11	61
+
+> ~/Workplace/newOa/index.html
+	"	43	0
+	^	57	5
+	.	57	5
+	+	57	5
+	a	59	4
+	h	18	0
+	m	59	13
+
+> ~/.vim/bundle/tern_for_vim/README.md
+	"	66	0
+
+> ~/.vim/[Vundle] Installer
+	"	29	33
+	.	1	0
+	+	1	0
+
+> ~/Workplace/newOa/.gitignore
+	"	11	7
+
+> /tmp/vimrc
+	"	285	1
+	^	79	21
+	.	273	0
+	+	49	0
+	+	80	0
+	+	84	0
+	+	83	0
+	+	79	20
+	+	275	0
+	+	307	0
+	+	274	0
+	+	273	0
+	a	1	0
+	b	1	0
+	c	1	0
+	d	1	0
+	e	1	0
+	f	1	0
+	g	1	0
+	h	1	0
+	i	1	0
+	j	1	0
+	k	1	0
+	l	1	0
+	m	91	0
+	n	1	0
+	o	1	0
+	p	1	0
+	q	1	0
+	r	1	0
+	s	1	0
+	t	1	0
+	u	1	0
+	v	1	0
+	w	1	0
+	x	1	0
+	y	1	0
+	z	1	0
+
+> ~/.vim/doc/showmarks.txt
+	"	74	46
+	.	265	0
+	+	265	0
 
 > ~/Workplace/newOa/dist/js/apps/custom/customer.ctrl.js
 	"	1	0
@@ -810,36 +2002,6 @@ $Nov 17, 2015
 	"	507	0
 	.	508	0
 	+	508	0
-
-> ~/.vim/-MiniBufExplorer-
-	"	1	0
-	.	2	0
-	+	2	0
-	+	2	0
-	+	2	0
-	+	2	0
-	+	2	0
-	+	2	0
-	+	2	0
-	+	2	0
-	+	2	0
-	+	2	0
-	+	2	0
-	+	2	0
-	+	2	0
-	+	2	0
-	+	2	0
-	+	2	0
-	+	2	0
-	+	2	0
-	+	2	0
-	+	2	0
-	+	2	0
-	+	2	0
-	+	2	0
-	+	2	0
-	+	2	0
-	+	2	0
 
 > ~/.vim/undotree_2
 	"	3	1
@@ -942,1505 +2104,3 @@ $Nov 17, 2015
 	"	1	0
 	.	1	0
 	+	1	0
-
-> ~/Workplace/newOa/inde
-	"	1	0
-
-> /tmp/config-err-OPIoaH
-	"	4	0
-	^	6	16
-	.	6	15
-	+	6	15
-
-> /tmp/NERD_tree_1
-	"	10	0
-	.	1	0
-	+	1	0
-	+	1	0
-	+	1	0
-
-> ~/Workplace/newOa/.git/COMMIT_EDITMSG
-	"	1	16
-	^	1	19
-	.	1	16
-	+	2	22
-	+	1	16
-
-> ~/Workplace/newOa/pages/apps/issue/issue.html
-	"	72	0
-	^	8	40
-	.	3	0
-	+	1	0
-	+	76	0
-	+	3	0
-
-> ~/Workplace/newOa/dist/js/apps/custom/customerList.ctrl.js
-	"	357	12
-	^	69	35
-	.	69	0
-	+	69	0
-
-> ~/Workplace/newOa/NERD_tree_1
-	"	16	0
-	.	1	0
-	+	1	0
-	+	1	0
-	+	1	0
-	+	1	0
-	+	1	0
-	+	1	0
-	+	1	0
-	+	1	0
-	+	1	0
-	+	1	0
-	+	1	0
-	+	1	0
-	+	1	0
-	+	1	0
-	+	1	0
-	+	1	0
-	+	1	0
-	+	1	0
-	+	1	0
-	+	1	0
-	+	1	0
-	+	1	0
-	+	1	0
-	+	1	0
-	+	1	0
-	+	1	0
-	+	1	0
-	+	1	0
-	+	1	0
-	+	1	0
-	+	1	0
-	+	1	0
-	+	1	0
-	+	1	0
-	+	1	0
-	+	1	0
-	+	1	0
-	+	1	0
-	+	1	0
-	+	1	0
-	+	1	0
-	+	1	0
-	+	1	0
-	+	1	0
-	+	1	0
-	+	1	0
-	+	1	0
-	+	1	0
-	+	1	0
-	+	1	0
-	+	1	0
-	+	1	0
-	+	1	0
-	+	1	0
-	+	1	0
-	+	1	0
-	+	1	0
-	+	1	0
-	+	1	0
-	+	1	0
-	+	1	0
-	+	1	0
-	+	1	0
-	+	1	0
-	+	1	0
-	+	1	0
-	+	1	0
-	+	1	0
-	+	1	0
-	+	1	0
-	+	1	0
-	+	1	0
-	+	1	0
-	+	1	0
-	+	1	0
-	+	1	0
-	+	1	0
-	+	1	0
-	+	1	0
-	+	1	0
-	+	1	0
-	+	1	0
-	+	1	0
-	+	1	0
-
-> ~/Workplace/newOa/dist/js/apps/issue/issue.ctrl.js
-	"	91	47
-	^	89	110
-	.	89	104
-	+	125	31
-	+	14	27
-	+	114	0
-	+	113	17
-	+	185	36
-	+	113	0
-	+	182	0
-	+	181	0
-	+	125	6
-	+	140	0
-	+	140	0
-	+	140	34
-	+	140	0
-	+	140	0
-	+	140	0
-	+	140	0
-	+	140	0
-	+	140	0
-	+	75	0
-	+	140	0
-	+	141	15
-	+	155	15
-	+	155	15
-	+	144	0
-	+	144	0
-	+	144	0
-	+	144	0
-	+	144	0
-	+	133	0
-	+	127	0
-	+	126	31
-	+	140	0
-	+	155	60
-	+	169	0
-	+	174	0
-	+	169	33
-	+	170	0
-	+	173	0
-	+	174	0
-	+	169	0
-	+	158	0
-	+	159	0
-	+	169	0
-	+	154	0
-	+	175	39
-	+	151	0
-	+	150	0
-	+	154	0
-	+	152	0
-	+	152	0
-	+	152	45
-	+	155	0
-	+	154	15
-	+	152	0
-	+	159	0
-	+	132	0
-	+	161	12
-	+	161	0
-	+	161	0
-	+	163	0
-	+	161	0
-	+	163	0
-	+	162	32
-	+	161	21
-	+	162	17
-	+	173	40
-	+	127	17
-	+	141	42
-	+	154	43
-	+	152	42
-	+	162	16
-	+	161	0
-	+	125	0
-	+	22	0
-	+	15	63
-	+	198	35
-	+	8	0
-	+	9	0
-	+	13	28
-	+	205	0
-	+	198	86
-	+	17	0
-	+	21	0
-	+	17	0
-	+	17	29
-	+	19	45
-	+	75	0
-	+	76	0
-	+	77	14
-	+	78	0
-	+	81	43
-	+	80	0
-	+	81	31
-	+	17	0
-	+	16	0
-	+	85	30
-	+	82	0
-	+	83	0
-	+	82	37
-	+	89	104
-
-> ~/Workplace/newOa/__Tagbar__
-	"	1	0
-	.	2	0
-	+	12	0
-	+	12	0
-	+	12	0
-	+	12	0
-	+	12	0
-	+	12	0
-	+	12	0
-	+	12	0
-	+	12	0
-	+	12	0
-	+	12	0
-	+	12	0
-	+	12	0
-	+	12	0
-	+	12	0
-	+	12	0
-	+	12	0
-	+	12	0
-	+	12	0
-	+	12	0
-	+	12	0
-	+	12	0
-	+	12	0
-	+	12	0
-	+	12	0
-	+	12	0
-	+	12	0
-	+	12	0
-	+	12	0
-	+	12	0
-	+	12	0
-	+	12	0
-	+	12	0
-	+	12	0
-	+	12	0
-	+	12	0
-	+	12	0
-	+	12	0
-	+	12	0
-	+	12	0
-	+	12	0
-	+	12	0
-	+	12	0
-	+	12	0
-	+	12	0
-	+	12	0
-	+	12	0
-	+	12	0
-	+	12	0
-	+	12	0
-	+	12	0
-	+	12	0
-	+	12	0
-	+	12	0
-	+	12	0
-	+	12	0
-	+	12	0
-	+	12	0
-	+	12	0
-	+	12	0
-	+	12	0
-	+	12	0
-	+	12	0
-	+	12	0
-	+	12	0
-	+	12	0
-	+	2	0
-	+	2	0
-	+	2	0
-	+	2	0
-	+	2	0
-	+	2	0
-	+	2	0
-	+	2	0
-	+	2	0
-	+	2	0
-	+	2	0
-	+	2	0
-	+	2	0
-	+	2	0
-	+	2	0
-	+	2	0
-	+	2	0
-	+	2	0
-	+	2	0
-	+	2	0
-	+	2	0
-	+	2	0
-	+	2	0
-
-> ~/Workplace/newOa/dist/js/base/utility.js
-	"	220	12
-	^	218	13
-	.	218	12
-	+	222	0
-	+	206	22
-	+	218	11
-	+	207	0
-	+	218	0
-	+	207	45
-	+	208	86
-	+	211	0
-	+	219	11
-	+	208	72
-	+	209	0
-	+	210	0
-	+	209	76
-	+	210	0
-	+	209	94
-	+	219	22
-	+	221	11
-	+	220	106
-	+	221	0
-	+	212	48
-	+	213	47
-	+	214	47
-	+	215	58
-	+	216	90
-	+	217	85
-	+	222	24
-	+	227	11
-	+	223	0
-	+	227	0
-	+	228	23
-	+	229	11
-	+	174	0
-	+	260	16
-	+	241	15
-	+	240	0
-	+	241	14
-	+	221	0
-	+	242	0
-	+	235	0
-	+	241	14
-	+	236	25
-	+	237	24
-	+	239	26
-	+	237	0
-	+	198	0
-	+	199	0
-	+	178	11
-	+	178	29
-	+	186	39
-	+	188	34
-	+	193	0
-	+	196	22
-	+	188	29
-	+	203	0
-	+	188	26
-	+	203	57
-	+	231	48
-	+	232	12
-	+	227	12
-	+	221	12
-	+	218	12
-
-> ~/Workplace/newOa/dist/js/apps/issue/issueCommon.factory.js
-	"	136	16
-	^	333	30
-	.	333	29
-	+	166	0
-	+	159	56
-	+	166	0
-	+	170	0
-	+	171	0
-	+	176	0
-	+	172	0
-	+	173	0
-	+	183	0
-	+	183	0
-	+	179	0
-	+	183	0
-	+	173	37
-	+	174	39
-	+	176	0
-	+	160	0
-	+	175	43
-	+	179	58
-	+	183	28
-	+	180	0
-	+	183	0
-	+	323	40
-	+	206	0
-	+	214	0
-	+	215	0
-	+	324	50
-	+	232	0
-	+	216	0
-	+	227	0
-	+	235	0
-	+	238	0
-	+	242	0
-	+	243	0
-	+	247	0
-	+	227	0
-	+	232	0
-	+	231	0
-	+	216	42
-	+	219	35
-	+	220	51
-	+	230	29
-	+	241	32
-	+	242	69
-	+	235	0
-	+	215	46
-	+	224	0
-	+	221	34
-	+	222	28
-	+	221	60
-	+	222	54
-	+	226	0
-	+	322	67
-	+	323	59
-	+	324	70
-	+	325	16
-	+	147	26
-	+	148	20
-	+	147	39
-	+	148	52
-	+	146	43
-	+	149	33
-	+	150	20
-	+	149	47
-	+	150	59
-	+	155	0
-	+	151	28
-	+	152	55
-	+	153	30
-	+	332	31
-	+	333	31
-	+	18	0
-	+	255	0
-	+	304	0
-	+	304	0
-	+	253	0
-	+	254	0
-	+	252	29
-	+	304	14
-	+	257	31
-	+	304	0
-	+	304	0
-	+	304	0
-	+	304	28
-	+	304	20
-	+	304	21
-	+	304	28
-	+	297	32
-	+	302	31
-	+	302	31
-	+	6	0
-	+	205	0
-	+	298	26
-	+	299	12
-	+	300	13
-	+	299	24
-	+	302	0
-	+	301	25
-	+	303	0
-	+	304	0
-	+	333	29
-
-> ~/Workplace/newOa/dist/js/apps/issue/issueNew.ctrl.js
-	"	16	0
-	^	59	0
-	.	8	0
-	+	22	0
-	+	24	0
-	+	23	0
-	+	33	0
-	+	34	0
-	+	26	28
-	+	28	0
-	+	26	25
-	+	28	43
-	+	28	0
-	+	46	0
-	+	40	21
-	+	41	30
-	+	42	32
-	+	43	28
-	+	45	0
-	+	51	0
-	+	52	0
-	+	51	34
-	+	52	38
-	+	62	29
-	+	60	0
-	+	62	0
-	+	61	0
-	+	87	31
-	+	88	36
-	+	87	30
-	+	65	41
-	+	63	16
-	+	65	16
-	+	86	45
-	+	82	0
-	+	81	0
-	+	82	0
-	+	81	0
-	+	63	19
-	+	65	19
-	+	55	0
-	+	60	0
-	+	48	0
-	+	50	0
-	+	55	0
-	+	57	0
-	+	55	37
-	+	57	0
-	+	54	0
-	+	63	49
-	+	56	0
-	+	59	0
-	+	77	0
-	+	9	0
-	+	8	0
-
-> ~/Workplace/newOa/dist/js/apps/issue/issueDetail.ctrl.js
-	"	197	104
-	^	195	2
-	.	195	0
-	+	198	0
-	+	199	13
-	+	26	12
-	+	28	28
-	+	29	30
-	+	128	0
-	+	121	0
-	+	121	35
-	+	121	34
-	+	121	0
-	+	121	20
-	+	121	34
-	+	121	43
-	+	36	33
-	+	35	37
-	+	121	0
-	+	121	33
-	+	121	47
-	+	121	0
-	+	121	33
-	+	121	49
-	+	36	33
-	+	37	29
-	+	36	28
-	+	121	0
-	+	42	0
-	+	26	0
-	+	31	0
-	+	31	0
-	+	31	0
-	+	223	0
-	+	121	0
-	+	215	0
-	+	121	0
-	+	195	0
-
-> ~/Workplace/newOa/pages/apps/issue/issueDetail.html
-	"	69	58
-	^	69	59
-	.	65	63
-	+	76	0
-	+	65	62
-	+	64	136
-	+	60	61
-	+	68	61
-	+	65	63
-
-> ~/Workplace/newOa/dist/js/apps/issue/commonCtrl.js
-	"	175	0
-	.	98	0
-	+	15	14
-	+	17	0
-	+	174	0
-	+	98	0
-
-> ~/Workplace/newOa/dist/js/router/mainRouter.js
-	"	121	22
-	^	120	32
-	.	120	31
-	+	119	31
-	+	120	31
-
-> ~/Workplace/newOa/dist/js/apps/issue/issueMod.ctrl.js
-	"	43	8
-	.	32	0
-	+	12	0
-	+	24	86
-	+	229	103
-	+	235	0
-	+	237	58
-	+	24	63
-	+	229	76
-	+	31	0
-	+	25	0
-	+	26	0
-	+	30	0
-	+	39	0
-	+	43	0
-	+	32	0
-	+	32	0
-
-> ~/Workplace/newOa/dist/js/apps/custom/customerFollowNew.ctrl.js
-	"	220	0
-	^	189	60
-	.	189	57
-	+	218	0
-	+	216	0
-	+	190	20
-	+	190	0
-	+	188	24
-	+	190	27
-	+	188	55
-	+	190	0
-	+	189	57
-
-> /etc/nginx/nginx.conf
-	"	98	4
-	^	91	23
-	.	98	0
-	+	98	45
-	+	133	0
-	+	91	22
-	+	55	0
-	+	79	0
-	+	134	0
-	+	98	0
-
-> ~/Workplace/ui-router/sample/index.html
-	"	1	0
-
-> ~/Workplace/ui-router/sample/NERD_tree_1
-	"	12	0
-	.	1	0
-	+	1	0
-	+	1	0
-	+	1	0
-
-> ~/Workplace/ui-router/sample/-MiniBufExplorer-
-	"	1	24
-	.	2	0
-	+	2	0
-	+	2	0
-	+	2	0
-	+	2	0
-	+	2	0
-	+	2	0
-	+	2	0
-
-> ~/Workplace/ui-router/sample/app/app.js
-	"	82	0
-
-> ~/Workplace/ui-router/sample/app/contacts/contacts.js
-	"	190	50
-
-> ~/.vim/bundle/vim-snippets/UltiSnips/javascript-mine.snippets
-	"	58	0
-	^	56	12
-	.	163	0
-	+	56	0
-	+	67	0
-	+	56	41
-	+	34	41
-	+	67	0
-	+	56	0
-	+	67	0
-	+	67	0
-	+	67	0
-	+	57	0
-	+	57	0
-	+	56	45
-	+	57	0
-	+	67	0
-	+	58	0
-	+	63	0
-	+	64	0
-	+	59	0
-	+	56	11
-	+	163	0
-
-> ~/Workplace/newOa/dist/js/apps/issue/issueBase.js
-	"	160	42
-	^	160	43
-	.	160	42
-	+	1	0
-	+	1	0
-	+	2	0
-	+	167	0
-	+	167	0
-	+	167	22
-	+	167	0
-	+	167	0
-	+	167	0
-	+	167	28
-	+	167	0
-	+	167	0
-	+	167	0
-	+	167	0
-	+	167	0
-	+	167	0
-	+	167	0
-	+	2	56
-	+	3	0
-	+	3	0
-	+	5	0
-	+	166	0
-	+	7	11
-	+	7	30
-	+	163	0
-	+	164	21
-	+	163	0
-	+	167	0
-	+	8	0
-	+	7	0
-	+	6	0
-	+	43	0
-	+	57	0
-	+	76	0
-	+	163	0
-	+	7	45
-	+	164	35
-	+	165	35
-	+	164	65
-	+	7	58
-	+	17	0
-	+	77	0
-	+	152	0
-	+	155	25
-	+	156	55
-	+	160	0
-	+	159	44
-	+	160	42
-
-> ~/Workplace/newOa/dist/js/base/shareData.factory.js
-	"	29	0
-
-> ~/Workplace/newOa/main.js
-	"	34	45
-	.	61	0
-	+	61	0
-
-> ~/.vim/bundle/vim-snippets/snippets/javascript/javascript.snippets
-	"	10	0
-
-> ~/.vim/bundle/vim-snippets/snippets/javascript/ControlP
-	"	1	0
-	.	1	0
-	+	1	0
-
-> ~/.vim/bundle/vim-snippets/snippets/javascript/myJavascript.snippets
-	"	2	9
-	^	2	10
-	.	2	9
-	+	2	9
-
-> ~/.vim/bundle/vim-snippets/snippets/javascript/-MiniBufExplorer-
-	"	1	23
-	.	2	0
-	+	2	0
-	+	2	0
-	+	2	0
-	+	2	0
-	+	2	0
-
-> ~/Workplace/newOa/dist/js/oaApp.js
-	"	72	6
-	^	78	0
-	.	78	0
-	+	70	49
-	+	75	0
-	+	76	0
-	+	79	0
-	+	79	0
-	+	79	0
-	+	79	0
-	+	80	0
-	+	79	13
-	+	82	10
-	+	79	0
-	+	79	0
-	+	79	15
-	+	79	0
-	+	79	0
-	+	79	3
-	+	79	0
-	+	79	0
-	+	79	24
-	+	79	0
-	+	79	0
-	+	79	0
-	+	79	0
-	+	79	0
-	+	79	0
-	+	79	0
-	+	78	0
-
-> ~/.vim/bundle/vim-snippets/snippets/javascript/javascript.d3.snippets
-	"	1	0
-
-> ~/Workplace/newOa/dist/js/protocol/Protocol.factory.js
-	"	177	0
-	^	179	0
-	.	179	0
-	+	145	50
-	+	136	94
-	+	145	193
-	+	147	0
-	+	146	23
-	+	145	50
-	+	178	54
-	+	180	0
-	+	178	171
-	+	179	0
-
-> ~/Workplace/newOa/dist/js/commonCtrl/companySelect.directive.js
-	"	585	83
-	^	36	48
-	.	585	78
-	+	2	0
-	+	11	36
-	+	6	0
-	+	13	16
-	+	14	53
-	+	16	0
-	+	15	0
-	+	16	33
-	+	18	22
-	+	29	394
-	+	29	69
-	+	7	0
-	+	17	0
-	+	20	29
-	+	22	26
-	+	26	51
-	+	29	61
-	+	29	67
-	+	29	76
-	+	29	78
-	+	29	80
-	+	29	31
-	+	48	0
-	+	30	0
-	+	47	0
-	+	46	0
-	+	48	0
-	+	34	36
-	+	35	37
-	+	37	8
-	+	27	24
-	+	29	18
-	+	29	0
-	+	27	42
-	+	28	34
-	+	29	0
-	+	29	36
-	+	29	18
-	+	40	0
-	+	46	0
-	+	40	0
-	+	41	0
-	+	29	18
-	+	29	34
-	+	30	0
-	+	30	0
-	+	29	25
-	+	30	0
-	+	44	0
-	+	43	19
-	+	20	0
-	+	22	56
-	+	23	30
-	+	29	34
-	+	23	30
-	+	22	30
-	+	23	32
-	+	22	55
-	+	23	54
-	+	24	50
-	+	33	65
-	+	39	74
-	+	36	45
-	+	348	0
-	+	351	0
-	+	349	0
-	+	350	0
-	+	348	20
-	+	585	78
-
-> ~/Workplace/newOa/pages/plugin/companySelect.html
-	"	61	4
-	^	53	53
-	.	3	0
-	+	7	0
-	+	9	0
-	+	18	0
-	+	17	0
-	+	19	0
-	+	28	0
-	+	29	0
-	+	28	0
-	+	38	0
-	+	30	0
-	+	27	0
-	+	29	28
-	+	1	34
-	+	3	32
-	+	29	28
-	+	41	145
-	+	40	0
-	+	40	151
-	+	61	0
-	+	29	45
-	+	61	0
-	+	42	0
-	+	42	150
-	+	43	0
-	+	44	0
-	+	50	0
-	+	61	0
-	+	53	52
-	+	61	0
-	+	61	0
-	+	3	32
-	+	1	23
-	+	3	0
-	+	3	0
-
-> ~/Workplace/newOa/pages/apps/custom/customerNew.html
-	"	167	0
-	^	156	122
-	.	156	119
-	+	73	0
-	+	72	70
-	+	75	60
-	+	71	118
-	+	74	111
-	+	75	48
-	+	72	48
-	+	143	77
-	+	144	0
-	+	137	64
-	+	138	0
-	+	136	127
-	+	155	102
-	+	135	0
-	+	141	0
-	+	156	119
-
-> ~/Workplace/newOa/pages/apps/custom/customerFollowNew.html
-	"	105	1
-
-> ~/Workplace/newOa/dist/js/apps/custom/customerMod.ctrl.js
-	"	663	33
-	^	679	37
-	.	679	36
-	+	73	0
-	+	616	0
-	+	622	0
-	+	77	35
-	+	78	34
-	+	583	18
-	+	584	15
-	+	582	33
-	+	584	24
-	+	591	0
-	+	582	0
-	+	591	0
-	+	584	0
-	+	594	28
-	+	596	16
-	+	596	0
-	+	594	48
-	+	596	16
-	+	593	51
-	+	596	0
-	+	595	0
-	+	593	42
-	+	601	0
-	+	600	0
-	+	601	42
-	+	592	0
-	+	697	46
-	+	626	0
-	+	626	0
-	+	628	46
-	+	634	40
-	+	635	0
-	+	634	0
-	+	633	0
-	+	512	0
-	+	513	0
-	+	510	25
-	+	544	0
-	+	514	0
-	+	513	0
-	+	514	29
-	+	513	23
-	+	520	41
-	+	522	12
-	+	520	42
-	+	522	16
-	+	520	52
-	+	522	0
-	+	524	0
-	+	523	0
-	+	522	24
-	+	523	47
-	+	521	45
-	+	523	53
-	+	526	45
-	+	527	40
-	+	532	55
-	+	533	47
-	+	538	52
-	+	539	47
-	+	525	0
-	+	519	33
-	+	703	26
-	+	682	31
-	+	686	8
-	+	682	31
-	+	702	36
-	+	686	21
-	+	683	32
-	+	684	12
-	+	686	31
-	+	703	0
-	+	703	0
-	+	643	26
-	+	681	8
-	+	643	35
-	+	666	0
-	+	680	29
-	+	676	12
-	+	680	37
-	+	676	25
-	+	677	26
-	+	675	28
-	+	680	44
-	+	681	0
-	+	684	16
-	+	644	28
-	+	654	25
-	+	655	27
-	+	657	44
-	+	659	28
-	+	660	8
-	+	659	33
-	+	660	33
-	+	661	12
-	+	663	31
-	+	661	45
-	+	661	0
-	+	665	0
-	+	679	36
-
-> ~/Workplace/newOa/dist/js/apps/custom/customerFollowMod.ctrl.js
-	"	270	0
-
-> ~/Workplace/newOa/pages/apps/oaHome/oa.html
-	"	18	64
-	^	31	0
-	.	6	0
-	+	12	0
-	+	38	0
-	+	64	0
-	+	70	0
-	+	32	0
-	+	31	0
-	+	27	0
-	+	6	0
-
-> ~/Workplace/newOa/dist/js/apps/oaHome/oaHeader.ctrl.js
-	"	73	16
-	^	70	63
-	.	70	60
-	+	75	0
-	+	32	37
-	+	33	12
-	+	33	0
-	+	32	35
-	+	37	0
-	+	34	0
-	+	37	0
-	+	35	43
-	+	38	26
-	+	41	42
-	+	75	57
-	+	76	60
-	+	80	64
-	+	73	0
-	+	68	36
-	+	75	0
-	+	67	43
-	+	68	34
-	+	69	0
-	+	68	0
-	+	71	43
-	+	75	29
-	+	75	50
-	+	71	61
-	+	75	0
-	+	74	0
-	+	71	46
-	+	70	60
-
-> ~/Workplace/newOa/sass/oa.m.scss
-	"	121	19
-	^	49	0
-	.	123	0
-	+	29	0
-	+	30	0
-	+	29	0
-	+	30	0
-	+	51	15
-	+	52	23
-	+	49	0
-	+	123	0
-
-> ~/Workplace/newOa/dist/js/apps/custom/-MiniBufExplorer-
-	"	1	0
-	.	2	0
-	+	2	0
-	+	2	0
-	+	2	0
-	+	2	0
-	+	2	0
-	+	2	0
-	+	2	0
-	+	2	0
-	+	2	0
-	+	2	0
-	+	2	0
-	+	2	0
-	+	2	0
-	+	2	0
-	+	2	0
-	+	2	0
-	+	2	0
-	+	2	0
-	+	2	0
-	+	2	0
-	+	2	0
-	+	2	0
-	+	2	0
-	+	2	0
-	+	2	0
-	+	2	0
-	+	2	0
-	+	2	0
-	+	2	0
-	+	2	0
-	+	2	0
-	+	2	0
-	+	2	0
-	+	2	0
-	+	2	0
-	+	2	0
-	+	2	0
-	+	2	0
-	+	2	0
-	+	2	0
-	+	2	0
-	+	2	0
-	+	2	0
-	+	2	0
-	+	2	0
-	+	2	0
-	+	2	0
-	+	2	0
-	+	2	0
-	+	2	0
-
-> ~/Workplace/newOa/dist/js/apps/custom/customerFollowModBak.js
-	"	39	0
-	^	12	10
-	.	13	0
-	+	1	0
-	+	263	0
-	+	267	0
-	+	10	0
-	+	11	0
-	+	13	0
-
-> ~/Workplace/newOa/dist/js/apps/custom/__Tagbar__
-	"	1	0
-	.	2	0
-	+	2	0
-	+	2	0
-	+	2	0
-	+	2	0
-	+	2	0
-
-> ~/Workplace/newOa/dist/js/apps/custom/customerRead.ctrl.js
-	"	8	0
-
-> ~/Workplace/newOa/.tern-project
-	"	14	26
-	^	14	29
-	.	14	26
-	+	16	44
-	+	2	0
-	+	13	13
-	+	14	26
-
-> ~/.vim/bundle/tagbar/autoload/tagbar.vim
-	"	1095	72
-	^	1081	27
-	.	1081	28
-	+	1085	0
-	+	1085	0
-	+	1085	15
-	+	1088	30
-	+	1085	0
-	+	1085	0
-	+	1085	0
-	+	1085	30
-	+	1085	0
-	+	1081	36
-	+	1084	9
-	+	1082	30
-	+	1084	0
-	+	1080	0
-	+	1081	30
-	+	1082	30
-	+	1081	28
-	j	425	6
-
-> ~/.vim/bundle/tagbar/doc/tagbar.txt
-	"	740	39
-
-> /usr/local/lib/node_modules/jsctags/src/ctags.js
-	"	19	0
-
-> /usr/local/lib/node_modules/jsctags/src/condenser.js
-	"	49	0
-
-> /usr/local/lib/node_modules/jsctags/src/__Tagbar__
-	"	2	2
-	.	4	0
-	+	4	0
-	+	4	0
-	+	4	0
-
-> /usr/local/lib/node_modules/jsctags/src/-MiniBufExplorer-
-	"	1	17
-	.	2	0
-	+	2	0
-	+	2	0
-
-> ~/Workplace/newOa/bower_components/angular/angular.js
-	"	10787	0
-	^	10787	0
-
-> ~/Workplace/newOa/Gruntfile.js
-	"	14	20
-
-> ~/Workplace/newOa/main.
-	"	1	0
-
-> ~/Workplace/newOa/[Vundle] Installer
-	"	25	0
-	.	1	0
-	+	1	0
-
-> /tmp/vdws30T/90
-	"	1	0
-
-> /usr/local/lib/node_modules/jsctags/bin/jsctags
-	"	22	64
-
-> ~/.vim/bundle/tagbar/doc/tags
-	"	1	0
-
-> ~/.vim/bundle/tagbar/README.md
-	"	89	0
-
-> ~/Workplace/newOa/.gitignore
-	"	1	0
-
-> ~/Workplace/newOa/main.require.js
-	"	8	0
-
-> ~/Workplace/newOa/karma.conf.js
-	"	21	0
-	^	16	0
-	.	23	0
-	+	16	0
-	+	22	0
-	+	23	0
-
-> ~/.ctags
-	"	8	0
-	^	11	61
-	.	11	61
-	+	11	61
-
-> /usr/share/vim/vim74/syntax/synload.vim
-	"	19	18
-
-> /usr/share/vim/vim74/doc/vi_diff.txt
-	"	484	23
-
-> /usr/share/vim/vim74/doc/pi_tar.txt
-	"	83	31
-
-> /usr/local/lib/node_modules/jsctags/node_modules/deepmerge/index.js
-	"	18	8
-
-> /usr/local/lib/node_modules/jsctags/test/runner.js
-	"	24	0
-
-> /usr/local/lib/node_modules/jsctags/bin/xjsctags
-	"	17	0
-
-> /usr/local/lib/node_modules/jsctags/readme.md
-	"	79	0
-
-> ~/.zshrc
-	"	86	0
-	^	90	31
-	.	90	30
-	+	87	60
-	+	90	30
-
-> /tmp/npm-debug.log
-	"	50	26
-	^	50	27
-	.	50	27
-	+	47	8
-	+	46	8
-	+	50	27
-
-> /tmp/install.sh
-	"	178	16
-	^	171	0
-	.	171	0
-	+	205	0
-	+	21	0
-	+	171	0
-
-> /etc/apt/sources.list
-	"	49	0
-	.	50	0
-	+	33	0
-	+	39	0
-	+	35	0
-	+	50	0
-
-> /etc/default/grub
-	"	33	26
-	^	6	2
-	.	11	33
-	+	6	3
-	+	11	126
-	+	13	0
-	+	6	4
-	+	8	0
-	+	6	0
-	+	12	0
-	+	11	50
-	+	6	1
-	+	11	33
-
-> ~/NERD_tree_1
-	"	21	0
-	.	1	0
-	+	1	0
-
-> ~/Workplace/newOa/test/apps/issue/issue.ctrl.spec.js
-	"	394	27
-	^	193	19
-	.	192	19
-	+	289	49
-	+	300	76
-	+	300	0
-	+	377	0
-	+	377	0
-	+	376	39
-	+	396	0
-	+	376	0
-	+	397	14
-	+	376	38
-	+	287	37
-	+	382	0
-	+	383	64
-	+	384	63
-	+	385	38
-	+	380	50
-	+	387	0
-	+	393	30
-	+	392	39
-	+	393	55
-	+	394	0
-	+	388	0
-	+	390	0
-	+	389	45
-	+	360	41
-	+	368	40
-	+	362	40
-	+	368	32
-	+	363	53
-	+	366	23
-	+	364	27
-	+	365	0
-	+	367	30
-	+	365	48
-	+	366	0
-	+	368	55
-	+	369	23
-	+	368	72
-	+	363	31
-	+	368	75
-	+	371	0
-	+	369	34
-	+	373	0
-	+	370	56
-	+	365	67
-	+	252	0
-	+	251	60
-	+	234	27
-	+	231	0
-	+	234	0
-	+	231	31
-	+	232	49
-	+	190	35
-	+	190	36
-	+	192	19
-
-> ~/[Vundle] Installer
-	"	26	0
-	^	88	23
-	.	1	0
-	+	76	0
-	+	51	0
-	+	26	0
-	+	1	0
-
-> ~/-MiniBufExplorer-
-	"	1	10
-	.	2	0
-	+	2	0
-	+	2	0
-	+	2	0
-	+	2	0
-	+	2	0
-	+	2	0
-	+	2	0
-	+	2	0
-	+	2	0
-	+	2	0
-	+	2	0
-	+	2	0
-	+	2	0
-	+	2	0
-	+	2	0
-	+	2	0
-	+	2	0
-
-> ~/.vim/bundle/Vundle.vim/doc/vundle.txt
-	"	8	67
-
-> ~/Workplace/newOa/dist/js/commonCtrl/commonCtrl.factory.js
-	"	31	11
-	^	13	11
-	.	13	0
-	+	13	0
