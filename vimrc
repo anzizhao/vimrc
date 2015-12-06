@@ -164,12 +164,6 @@ Plugin 'honza/vim-snippets'
 ""Plugin 'Lokaltog/vim-powerline'
 ""taglist
 ""Plugin 'kylinwowo/taglist'
-""phpcomplete
-"Plugin 'shawncplus/phpcomplete.vim'
-""php manual
-""Plugin 'alvan/vim-php-manual'
-""Plugin 'adoy/vim-php-refactoring-toolbox'
-"Plugin 'joonty/vim-phpqa' P"P
 "
 "
 "tern 插件
@@ -195,7 +189,11 @@ Plugin 'Raimondi/delimitMate'
 
 Plugin 'gorodinskiy/vim-coloresque'
 
+Plugin 'kana/vim-textobj-user'
+Plugin 'kana/vim-textobj-function'
+Plugin 'thinca/vim-textobj-function-javascript'
 
+"end
 call vundle#end()
 
 let mapleader=","
@@ -598,19 +596,6 @@ map <Leader>se :Errors<cr>
 "let g:syntastic_check_on_open = 1
 "let g:syntastic_check_on_wq = 0
 "
-"""""""""""""""""""""""""
-""  php smart complete  "
-"""""""""""""""""""""""""
-""let g:phpcomplete_add_class_extensions = ['mongo']
-""let g:phpcomplete_add_function_extensions = ['mongo']
-""let g:phpcomplete_parse_docblock_comments = 1 "not working...
-"let g:phpcomplete_search_tags_for_variables = 1
-""let g:phpcomplete_complete_for_unknown_classes = 1
-""let g:phpcomplete_relax_static_constraint = 1
-"let g:phpcomplete_cache_taglists = 1
-"let g:phpcomplete_enhance_jump_to_definition = 1
-"let g:phpcomplete_mappings = { 'jump_to_def': ',g', }
-"autocmd FileType php setlocal omnifunc=phpcomplete#CompletePHP
 
 """"""""""""""""""""""
 "  ycm autocomplete  "
@@ -754,3 +739,5 @@ nmap <leader>dm :DelimitMateSwitch<cr>
 nmap <leader>st :ShowMarksToggle<cr>
 
 source ~/.vim/plugin/cscope_maps.vim
+
+

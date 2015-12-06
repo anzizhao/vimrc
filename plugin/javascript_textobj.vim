@@ -1,0 +1,1 @@
+/home/zja/sofeware/vim-textobj-function/plugin/mine/javascript_textobj.vim

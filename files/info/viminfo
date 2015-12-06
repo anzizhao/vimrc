@@ -8,7 +8,7 @@
 # hlsearch on (H) or off (h):
 ~H
 # Last Search Pattern:
-~MSle0~/cmd
+~MSle0~/Plugin
 
 # Last Substitute Search Pattern:
 ~MSle0&.*
@@ -17,25 +17,70 @@
 $Nov 17, 2015
 
 # Command Line History (newest to oldest):
+:q!
+:wq
+:wa
+:PluginInstall
+:source ~/.vim/vimrc
+:q
+:help textobj-function
+:qa
+:w
+:help cursor
+:help search 
+:call search('\n')
+:help textobj-function-javascript
+:help bundle
+:help textobj-user.txt
+:l
+:BundleInstall
+:vsp
+:help textobj-user-obsolete-api
+:b1
+:help text-obj-function
+:help textobjfunction
+:help lower
+:help lowercase
+:help regex
+:help assign
+:help getpos
+:getpos
+:help search
+:help text-obj
+:search
+:help select
+:help s:select
+:help line
+:help text-ojb
+:help 
+:help textobj
+:source ~/.vim/vimrc 
+:call search('\v\A|\n')
+:call search('\v\A|\n', 'b')
+:call search('\v\w|\n', 'b')
+:call search('\v\w\n', 'b')
+:call search('\v\A\n', 'b')
+:call search('\v\A', 'b')
+:call search('\v\A')
+:'<,'>s/\\//g
+:call search('\s|[a]')
+:call search('\s')
+:call search('\v\s|[{[]]')
+:call search('\v\s|[{[]')
+:call search('\v\s|[{]')
+:call search('\v\s|[a]')
+:qa!
+:sp
+:e
 :wq!
 :w!
-:wq
-:qa
-:vsp
-:w
-:q
 :TagbarCurrentTag
 :messages
-:q!
-:b1
-:sp
 :TernDoc
 :TernDefPreview
-:e
 :'<,'>s/'/"/g
 :b6
 :b4
-:wa
 :'<,'>
 :b5
 :n text_util.js
@@ -49,15 +94,12 @@ $Nov 17, 2015
 :TagbarGetTypeConfig javascript
 :TagbarGetTypeConfig javascriptp
 :help tagbar 
-:qa!
-:source ~/.vim/vimrc 
 :set statusline
 :set filetype
 :q！
 :45
 :h tagbar-issues
 :Q
-:BundleInstall
 :'<,'>q
 :help 'showmarks
 :set runtimepath
@@ -68,7 +110,6 @@ $Nov 17, 2015
 :source ~/.vim/vim 
 :s
 :'<,'>s/fn/afterGetCount/g
-:source ~/.vim/vimrc
 :runtimepath
 :runtime
 :%s/isEditBut/toEditContact/gc
@@ -110,6 +151,73 @@ $Nov 17, 2015
 :b7
 
 # Search String History (newest to oldest):
+? Plugin
+? function_range
+? jump_to_pair
+? fhakfha
+? \n
+? functions
+? use
+? plugi
+? function
+? List
+? word
+? iw
+? select
+? s:select
+? a{
+? textojb
+? camel
+? fhakfhafh
+? hfahfahf
+? fhafhafh
+? A
+? alp
+? hfakfhah
+? a
+? hkahfahf
+? alpha
+? hfakhfa
+? Withou
+? angul
+? $
+? bc
+? \\
+? head_pos
+? fhafha
+? -
+? +
+? + 1
+? w
+? mine
+? ja
+? hfafha
+? \
+? an
+? Chun
+? trans
+? scope
+? id
+? if
+? [
+? ngA
+? oa
+? ng
+? "
+? time
+? ctrl
+? exports
+? server
+? config
+? http
+? log_format
+? access_log
+? login
+? input
+? nv-file
+? parse
+? export
+? srv
 ?/parse
 ? new
 ? keyMap
@@ -265,16 +373,424 @@ $Nov 17, 2015
 
 # Registers:
 "0	LINE	0
+	Plugin 'kana/vim-textobj-function'
+"1	CHAR	0
 	
-""1	LINE	0
+	transfer
+"2	CHAR	0
 	
-"2	LINE	0
-	  kfhfhakfhakfhkafh,se
-"3	LINE	0
+	transfer
+"3	CHAR	0
 	
+	test
 "4	LINE	0
-	    //maybe to export
-"5	LINE	0
+	_hfkahfkaf_fhkafha
+	hfkahfkaf
+"5	CHAR	0
+	
+	hfhfa
+"6	CHAR	0
+	
+	hfhfa
+"7	CHAR	0
+	
+	hfhfa
+"8	CHAR	0
+	['angular', 
+	       'js/base/utility',
+	       'jquery',
+	       'uiRouter',
+	       'uiBootstrap',
+	       'js/base/shareData.factory',
+	       'js/protocol/Protocol.factory',
+	], 
+	//TODO 跟进相关的内容 html js protocol
+	function(angular, utility, $){
+	    /*jslint unparam: true*/
+	    function customListCtrl($scope, transferProto, $state, $timeout, $location, $anchorScroll, businessWrap, devDetect){
+	        var Wrap = businessWrap.wrap; 
+	        var mv = this;
+	        mv.define = {
+	            FIRST_PAGE : 1,   //第一页
+	            MODEL_ALL: 1,   //所有客户
+	            MODEL_MY: 2, //我创建的
+	            MODEL_MANAGE: 3, //我管理的
+	            MODEL_SEARCH: 4, // 搜索
+	        };
+	        mv.customerdb = []; 
+	        mv.dbIndex = {};   //数组库的索引
+	        mv.status = {  //controller 的状态
+	            db: {  //customerdb 状态
+	                isLoading: false,  
+	            }
+	        };
+	        //zzv
+	        mv.etc = {
+	            limit: 12,  
+	            pageSize: 8,
+	            mobilePageSize: 1, 
+	            idStr: "id",
+	            customerStatusStr: {0:"未跟进", 1:"陌拜", 2:"面谈一次后", 3:"口头签约",4:"签约成功"},
+	        }; 
+	        mv.pagination = { 
+	            curPage: mv.define.FIRST_PAGE,  //现在那一页
+	            pageSize: mv.etc.pageSize,   //tab button 个数限制 
+	            itemsPerPage: mv.etc.limit,  //每一页多少项
+	            itemNum: null,  //总共多少项 
+	            pageNum: 0,  //每一页显示的有多少项  只读
+	        };
+	        mv.search = ""; 
+	        mv.model = mv.define.MODEL_ALL;
+	        mv.isMobile = false; 
+	
+	        //zzp
+	        function getFollows(cid, init_fn){
+	            function deal(data){
+	                $timeout(function(){
+	                    var dataSet = data.list; 
+	                    //key 转换
+	                    var followdb =[]; 
+	                    var cond = {
+	                       "follow_time":"followTime",
+	                       "create_time": "createTime",
+	                    };
+	                    function perItem(value, key){
+	                        var item = {};
+	                        utility.assignObjByCondition(value, item, cond); 
+	                        followdb.push(item);
+	                    }
+	                    angular.forEach(dataSet, perItem); 
+	                    var customer = mv.customerdb[ mv.dbIndex[cid] ];
+	                    customer.follows = followdb;
+	
+	                    //基本完成后  一些后续的处理
+	                    if( init_fn instanceof Function ){
+	                        init_fn.call(this, data);  
+	                    }
+	                });
+	            }
+	
+	            var proto = new (transferProto.get())();
+	            var param = {
+	                appParam: cid, 
+	                offset: 0, 
+	                limit : 999,  //跟进情况不多 几条数量级  一次拿完
+	            };
+	            Wrap(proto.$getCustomerFollow, param, deal); 
+	        }
+	
+	        function getCustomerCount(init_fn){
+	            function deafult_fn(data){
+	                $timeout(function(){
+	                    var pagination = mv.pagination; 
+	                    var dataObj = data.obj;
+	                    pagination.itemNum = dataObj.count; 
+	                    //基本完成后  一些后续的处理
+	                    if( init_fn instanceof Function ){
+	                        init_fn.call(this, data);  
+	                    }
+	                });
+	            }
+	            var fn = deafult_fn;
+	            var d = mv.define;
+	            var  protocol = new (transferProto.get())();
+	            var model = mv.model;
+	            var obj = {};
+	            //TODO 补充相关协议
+	            switch(model){
+	                case d.MODEL_ALL:
+	                    Wrap(protocol.$getCustomersCount, null, fn); 
+	                break; 
+	                case d.MODEL_MY:
+	                    Wrap(protocol.$getCustomersMineCount, null, fn); 
+	                    break; 
+	                case d.MODEL_MANAGE:
+	                    Wrap(protocol.$getCustomersManageCount, null, fn); 
+	                    break; 
+	                case d.MODEL_SEARCH:
+	                    //if (! mv.search ){
+	                        //return ; 
+	                    //}
+	                    obj.kw = mv.search; 
+	                    Wrap(protocol.$getCustomersCountByKey, obj, fn); 
+	                    break;
+	                default:
+	                    //个数清零
+	                    mv.pagination.itemNum = 0;
+	                    console.log("input model value unknown "+model); 
+	            }
+	        }
+	
+	        function refreshdbIndex(){
+	            //清除
+	            mv.dbIndex = {}; 
+	            var db = mv.customerdb; 
+	            var index = mv.dbIndex; 
+	            var id = mv.etc.idStr;
+	            angular.forEach(db, function(value, key){
+	                index[value[id] ]  = key;  
+	            });  
+	        }
+	
+	        function refresh(){
+	            refreshdbIndex();  
+	        } 
+	
+	
+	        function getCustomers(offset, limit, init_fn){
+	            function cbGetCustomer(data){
+	                $timeout(function(){
+	                    var status = mv.status; 
+	                    var dataSet = data.list;
+	                    //加载完成
+	                    status.db.isLoading = false; 
+	
+	                    //key 转换
+	                    var customerdb = []; 
+	                    var cond = {
+	                        "customer_type" : "type",
+	                        "project_num": "projectNum",
+	                        "create_time": "createTime",
+	                        "newest_follow_time": "newestFollowTime",
+	                    };
+	
+	                    function perItemCustomer(value, key){
+	                        var item = {};
+	                        utility.assignObjByCondition(value, item, cond); 
+	                        customerdb.push(item);
+	                    }
+	                    angular.forEach(dataSet, perItemCustomer); 
+	
+	                    mv.customerdb = customerdb; 
+	
+	                    //字段内容转换
+	                    function perItem (item/*, key*/){
+	                        //特殊字段的转换
+	                        //convertReturnValue(item); 
+	                        item._status = {}; 
+	                    }
+	                    angular.forEach(customerdb, perItem);
+	
+	                    //更新数组相关
+	                    refresh(); 
+	                    if( init_fn instanceof Function ){
+	                        init_fn.call(this, data); 
+	                    }
+	                });
+	            }
+	
+	            var  protocol = new (transferProto.get())();
+	            var obj = {
+	                offset: offset,
+	                limit: limit, 
+	            };
+	            var status = mv.status; 
+	            var d = mv.define;
+	            var fn = cbGetCustomer;
+	            status.db.isLoading = true; 
+	            //TODO 增加协议
+	            switch(mv.model){
+	                case d.MODEL_ALL:
+	                    Wrap(protocol.$getCustomers, obj, fn); 
+	                break; 
+	                case d.MODEL_MY: 
+	                    Wrap(protocol.$getCustomersMine, obj, fn); 
+	                break; 
+	                case d.MODEL_MANAGE:
+	                    Wrap(protocol.$getCustomersManage , obj, fn); 
+	                break; 
+	                case d.MODEL_SEARCH:
+	                    obj.kw = mv.search; 
+	                    Wrap(protocol.$getCustomersByKey, obj, fn); 
+	                    break; 
+	                default:
+	                    //数据清零
+	                    mv.customerdb = []; 
+	                    status.db.isLoading = false;
+	                    console.log("input model value unknown "+status.model); 
+	            }
+	        }
+	
+	
+	        function pageChange(){ //更改页面  重新获取列表
+	            function afterGet(){
+	                // 每一次换页后  定位到首页
+	               $location.hash('customerList'); 
+	               $anchorScroll();
+	            }
+	
+	            var  cur = mv.pagination.curPage;  
+	            var etc = mv.etc; 
+	            //获取列表 
+	            var limit = etc.limit;
+	            var offset =  (cur -1)* limit;  
+	            getCustomers(offset, limit, afterGet); 
+	        }
+	
+	        //t time object
+	        function formatTime(t){
+	            //查出那里非date调用
+	            /* istanbul ignore else  */
+	            if (! (t instanceof Date)){
+	                return ;  
+	            }
+	            var M = String(t.getMonth() + 1);
+	            var d = String(t.getDate());
+	            var y = String(t.getFullYear());
+	            //var h = String(t.getHours());
+	            //var m = String(t.getMinutes());
+	            //var s = String(t.getSeconds());
+	            //return [y,M,d].join("-")+" "+ [h,m,s].join(":");  
+	            return [y,M,d].join("-");  
+	        }
+	        function formatTimeStr(str){
+	            var reg = /\d{4}-\d{2}-\d{2}/; 
+	            var retObj = reg.exec(str);
+	            return retObj[0];
+	
+	        }
+	        function countNotFollowDay(index){
+	            //计算多少天没有跟进
+	            var nftStr = mv.customerdb[index].newestFollowTime;
+	            //var nftStr = formatTimeStr(tmp);
+	            var nft = new Date(nftStr.replace(/-/g, "/"));
+	
+	            //tmp = new Date();
+	            //var nowStr = [tmp.getFullYear(), tmp.getMonth(), tmp.getDay()].join('-');
+	            var nowDay = new Date(); 
+	            //var sd = nft.getDay(); 
+	            //var ed = nowDay.getDay();
+	            //return ed - sd; 
+	            var st = nft.getTime(); 
+	            var et = nowDay.getTime();
+	            var dt = et -st;
+	            var dayUnit = 1000 * 60 * 60* 24;
+	            var sd = parseInt((st/dayUnit), 10)
+	            var ed = parseInt((et/dayUnit), 10)
+	            var ret = ed - sd; 
+	            //var ret = parseInt((dt/dayUnit), 10);
+	            //ret += (dt%dayUnit)?1:0;
+	            return ret;
+	        }
+	        function selectModel( model ){
+	            var status = mv.status; 
+	            var page = mv.pagination; 
+	            var d = mv.define;
+	            status.model = model; 
+	            page.curPage = d.FIRST_PAGE; 
+	
+	            getCustomerCount(); 
+	            getCustomers(0, mv.etc.limit); 
+	        }
+	
+	        function totalIndex(index){
+	            return  index + (mv.pagination.curPage-1)*mv.pagination.itemsPerPage + 1;
+	        }
+	        function init(){
+	            mv.isMobile = devDetect.detect();
+	            if ( mv.isMobile ){
+	               mv.pagination.pageSize = mv.etc.mobilePageSize;  
+	            }
+	            // 获取总的个数
+	            //var status = mv.status; 
+	            var d = mv.define;
+	            mv.model = d.MODEL_ALL; 
+	            if ($state.params.m ){
+	                mv.model = parseInt($state.params.m, 10);
+	            }
+	
+	            function initPageChange(){
+	                // 设置锚点  手机页面有用 
+	                /* istanbul ignore else  */
+	                if ($state.params.a){
+	                    var anchor = "customer" + $state.params.a; 
+	                    $location.hash(anchor); 
+	                    $anchorScroll(); 
+	                }
+	            }
+	            function cbInitGetCustom(data){
+	                $timeout(function(){
+	                    //如果要做返回定位页的话  需要构建page button 初始化current page
+	                    /* istanbul ignore else  */
+	                    if ($state.params.p){
+	                        mv.pagination.curPage = parseInt($state.params.p, 10); 
+	                    }
+	                    var  cur = mv.pagination.curPage;  
+	                    var etc = mv.etc; 
+	                    var limit = etc.limit;
+	                    var offset =  (cur -1)* limit;  
+	                    getCustomers(offset, limit, initPageChange); 
+	                });
+	            }
+	            getCustomerCount(cbInitGetCustom); 
+	        }
+	
+	        function bindEvent(){
+	            //监听折叠事件  如果为没有加载详情协议  加载
+	            //可能还没有生成
+	            $("#customerList").on('show.bs.collapse', "[id^='collapse']", function(/*e*/) {
+	                var id = $(this).data('customerid');
+	                function afterGet(){
+	                    return ; 
+	                }
+	                getFollows(id,  afterGet); 
+	            });
+	            
+	        }
+	
+	        function clickGetFollow(cid){
+	            function afterGet(){
+	                return ;
+	            }
+	            getFollows(cid,  afterGet); 
+	        }
+	
+	        function clickChangeModel(model){
+	            if ( model == mv.define.MODEL_SEARCH && !mv.search){ 
+	               return ; 
+	            }
+	            mv.model = model;
+	            //if ($state.params.m ){
+	                 
+	            //}
+	            //$state.params.m = model; 
+	            var page = mv.pagination; 
+	            var etc = mv.etc;
+	            page.curPage = 1; 
+	             
+	
+	            getCustomerCount(); 
+	            getCustomers(0, etc.limit); 
+	        }
+	
+	        function enterToSearch(event){
+	            if ( event.which === 13 ){
+	                var define = mv.define;
+	                clickChangeModel(define.MODEL_SEARCH); 
+	            } 
+	        }
+	        //zzf
+	        var mf = {
+	            pageChange: pageChange, 
+	            getCustomerCount: getCustomerCount,  
+	            selectModel: selectModel, 
+	            totalIndex: totalIndex,
+	            countNotFollowDay: countNotFollowDay, 
+	            formatTime: formatTime,
+	            formatTimeStr: formatTimeStr,
+	            clickGetFollow: clickGetFollow,
+	            clickChangeModel: clickChangeModel,
+	            enterToSearch: enterToSearch,
+	        };
+	
+	
+	        utility.addFuncToThis(mf, this); 
+	        init(); 
+	        bindEvent(); 
+	    }
+	    customListCtrl.$inject = [  '$anchorScroll', '$anchorScroll','$anchorScroll', 'businessWrap', 'devDetect' ];
+	
+	
 	    return angular
 	    //这个模块负责oa的头部 边框等
 	    .module('oa.customList', [
@@ -283,24 +799,22 @@ $Nov 17, 2015
 	            'oa.shareData',
 	            'ui.router'])
 	            .controller('customListCtrl', customListCtrl);
-	    } 
-"6	LINE	0
-	    customListCtrl.$inject = ['$scope', 'transferProto', '$state', '$timeout', '$location', '$anchorScroll', 'businessWrap', 'devDetect' ];
-"7	LINE	0
-	
-"8	LINE	0
-	
+	}
 "9	LINE	0
-	
+	"戏里戏外"  
+"a	CHAR	0
+	
 "j	CHAR	0
 	kkkjuj
 "p	CHAR	0
 	rqjkij
+"q	CHAR	0
+	:qjkk:P�kukkkkkkkkkkkkkkkkkkkkkkkjjjjjjjjjjjjjjjjjjqjjjjjjnj
 "u	CHAR	0
 	375
 <irejs(["text_util", "output"], function(text, output) {  window.addEventListener("load", function() {    // Pressing alt-. on `garble` jumps to the module    var word = text.capitalize(text.garble(prompt("Hi", "")))    output.write(word)  })})��,��.jkkkkjVjjj¯jjjlllllllllllllllllllllhhvllldjkkkkkjkVjjjjj=jjjjjjjkkkkkkkkkkkjkhhhhhhhhhhhhhlliqu	jjk��,��.:w
-"-	CHAR	0
-	  
+""-	CHAR	0
+	e
 
 # File marks:
 'A  1  0  /tmp/vimrc
@@ -329,201 +843,314 @@ $Nov 17, 2015
 'X  1  0  /tmp/vimrc
 'Y  1  0  /tmp/vimrc
 'Z  1  0  /tmp/vimrc
-'0  2  0  ~/.vim/.git/COMMIT_EDITMSG
-'1  24  0  ~/sofeware/jsctags/test.js
-'2  5  0  ~/sofeware/jsctags/test.js
-'3  1  0  ~/sofeware/jsctags/customerList.ctrl.js.bak
-'4  1  56  /tmp/main.js
-'5  16  0  /usr/local/lib/node_modules/jsctags/test/runner.js
-'6  271  0  ~/.vim/vimrc
-'7  55  0  ~/Workplace/newOa/dist/js/apps/custom/customerList.ctrl.js
-'8  53  0  ~/Workplace/newOa/dist/js/apps/custom/customerList.ctrl.js
-'9  1  0  ~/Workplace/newOa/dist/js/apps/custom/customerFollow.ctrl.js
+'0  2  27  ~/.vim/.git/COMMIT_EDITMSG
+'1  192  29  ~/.vim/vimrc
+'2  64  24  ~/Workplace/newOa/dist/js/apps/custom/customerList.ctrl.js
+'3  20  38  ~/Workplace/newOa/dist/js/apps/custom/customerList.ctrl.js
+'4  14  0  ~/Workplace/newOa/dist/js/apps/custom/customerList.ctrl.js
+'5  15  9  ~/Workplace/newOa/dist/js/apps/custom/customerList.ctrl.js
+'6  13  0  ~/Workplace/newOa/dist/js/apps/custom/customerList.ctrl.js
+'7  13  0  ~/Workplace/newOa/dist/js/apps/custom/customerList.ctrl.js
+'8  18  0  ~/Workplace/newOa/dist/js/apps/custom/customerList.ctrl.js
+'9  19  10  ~/Workplace/newOa/dist/js/apps/custom/customerList.ctrl.js
 
 # Jumplist (newest first):
--'  2  0  ~/.vim/.git/COMMIT_EDITMSG
--'  94  30  ~/.vim/.git/COMMIT_EDITMSG
+-'  2  27  ~/.vim/.git/COMMIT_EDITMSG
 -'  1  0  ~/.vim/.git/COMMIT_EDITMSG
--'  24  0  ~/sofeware/jsctags/test.js
--'  3  2  ~/sofeware/jsctags/cu.js
--'  395  0  ~/sofeware/jsctags/cu.js
--'  9  13  ~/sofeware/jsctags/cu.js
--'  398  0  ~/sofeware/jsctags/cu.js
--'  5  0  ~/sofeware/jsctags/test.js
--'  1  0  ~/sofeware/jsctags/cu.js
--'  1  0  ~/sofeware/jsctags/customerList.ctrl.js.bak
--'  1  56  /tmp/main.js
--'  4  9  /tmp/text_util.js
--'  9  8  /tmp/text_util.js
--'  11  0  /tmp/text_util.js
--'  28  33  /tmp/test.js
--'  7  1  /tmp/main.js
--'  37  0  /tmp/test.js
--'  1  9  /tmp/text_util.js
--'  6  5  /tmp/main.js
--'  22  62  /tmp/test.js
--'  27  0  /tmp/test.js
--'  70  0  /tmp/test.js
--'  1  0  /tmp/test.js
--'  16  0  /usr/local/lib/node_modules/jsctags/test/runner.js
--'  6  0  /usr/local/lib/node_modules/jsctags/test/runner.js
--'  15  4  /usr/local/lib/node_modules/jsctags/test/runner.js
--'  133  87  /usr/local/lib/node_modules/jsctags/test/runner.js
--'  18  0  /usr/local/lib/node_modules/jsctags/test/runner.js
--'  117  10  /usr/local/lib/node_modules/jsctags/test/runner.js
--'  137  4  /usr/local/lib/node_modules/jsctags/test/runner.js
--'  111  18  /usr/local/lib/node_modules/jsctags/test/runner.js
--'  13  23  /usr/local/lib/node_modules/jsctags/package.json
--'  149  6  /usr/local/lib/node_modules/jsctags/test/runner.js
--'  24  3  /usr/local/lib/node_modules/jsctags/package.json
--'  29  33  /usr/local/lib/node_modules/jsctags/examples/findref.md
--'  290  0  /usr/local/lib/node_modules/jsctags/node_modules/tern/plugin/angular.js
--'  229  27  /usr/local/lib/node_modules/jsctags/node_modules/tern/plugin/angular.js
--'  224  22  /usr/local/lib/node_modules/jsctags/node_modules/tern/plugin/angular.js
--'  223  27  /usr/local/lib/node_modules/jsctags/node_modules/tern/plugin/angular.js
--'  222  27  /usr/local/lib/node_modules/jsctags/node_modules/tern/plugin/angular.js
--'  221  23  /usr/local/lib/node_modules/jsctags/node_modules/tern/plugin/angular.js
--'  215  11  /usr/local/lib/node_modules/jsctags/node_modules/tern/plugin/angular.js
--'  214  75  /usr/local/lib/node_modules/jsctags/node_modules/tern/plugin/angular.js
--'  200  87  /usr/local/lib/node_modules/jsctags/node_modules/tern/plugin/angular.js
--'  181  45  /usr/local/lib/node_modules/jsctags/node_modules/tern/plugin/angular.js
--'  180  42  /usr/local/lib/node_modules/jsctags/node_modules/tern/plugin/angular.js
--'  170  23  /usr/local/lib/node_modules/jsctags/node_modules/tern/plugin/angular.js
--'  168  50  /usr/local/lib/node_modules/jsctags/node_modules/tern/plugin/angular.js
--'  167  15  /usr/local/lib/node_modules/jsctags/node_modules/tern/plugin/angular.js
--'  166  13  /usr/local/lib/node_modules/jsctags/node_modules/tern/plugin/angular.js
--'  157  35  /usr/local/lib/node_modules/jsctags/node_modules/tern/plugin/angular.js
--'  155  40  /usr/local/lib/node_modules/jsctags/node_modules/tern/plugin/angular.js
--'  154  19  /usr/local/lib/node_modules/jsctags/node_modules/tern/plugin/angular.js
--'  153  15  /usr/local/lib/node_modules/jsctags/node_modules/tern/plugin/angular.js
--'  138  22  /usr/local/lib/node_modules/jsctags/node_modules/tern/plugin/angular.js
--'  65  49  /usr/local/lib/node_modules/jsctags/node_modules/tern/plugin/angular.js
--'  58  43  /usr/local/lib/node_modules/jsctags/node_modules/tern/plugin/angular.js
--'  55  29  /usr/local/lib/node_modules/jsctags/node_modules/tern/plugin/angular.js
--'  54  27  /usr/local/lib/node_modules/jsctags/node_modules/tern/plugin/angular.js
--'  51  54  /usr/local/lib/node_modules/jsctags/node_modules/tern/plugin/angular.js
--'  49  25  /usr/local/lib/node_modules/jsctags/node_modules/tern/plugin/angular.js
--'  39  26  /usr/local/lib/node_modules/jsctags/node_modules/tern/plugin/angular.js
--'  31  50  /usr/local/lib/node_modules/jsctags/node_modules/tern/plugin/angular.js
--'  30  8  /usr/local/lib/node_modules/jsctags/node_modules/tern/plugin/angular.js
--'  29  36  /usr/local/lib/node_modules/jsctags/node_modules/tern/plugin/angular.js
--'  26  28  /usr/local/lib/node_modules/jsctags/node_modules/tern/plugin/angular.js
--'  25  48  /usr/local/lib/node_modules/jsctags/node_modules/tern/plugin/angular.js
--'  24  8  /usr/local/lib/node_modules/jsctags/node_modules/tern/plugin/angular.js
--'  23  36  /usr/local/lib/node_modules/jsctags/node_modules/tern/plugin/angular.js
--'  1  0  /usr/local/lib/node_modules/jsctags/node_modules/tern/plugin/angular.js
--'  492  44  /usr/local/lib/node_modules/jsctags/node_modules/tern/plugin/angular.js
--'  490  49  /usr/local/lib/node_modules/jsctags/node_modules/tern/plugin/angular.js
--'  439  36  /usr/local/lib/node_modules/jsctags/node_modules/tern/plugin/angular.js
--'  436  10  /usr/local/lib/node_modules/jsctags/node_modules/tern/plugin/angular.js
--'  271  0  ~/.vim/vimrc
--'  55  0  ~/Workplace/newOa/dist/js/apps/custom/customerList.ctrl.js
--'  1  0  ~/Workplace/newOa/dist/js/apps/custom/__Tagbar__
--'  2  0  ~/Workplace/newOa/dist/js/apps/custom/__Tagbar__
--'  57  8  ~/Workplace/newOa/dist/js/apps/custom/customerList.ctrl.js
--'  12  31  /usr/local/lib/node_modules/jsctags/node_modules/tern/plugin/requirejs.js
--'  351  6  /usr/local/lib/node_modules/jsctags/node_modules/tern/plugin/requirejs.js
--'  291  35  /usr/local/lib/node_modules/jsctags/node_modules/tern/plugin/requirejs.js
--'  179  4  /usr/local/lib/node_modules/jsctags/node_modules/tern/plugin/requirejs.js
--'  145  0  /usr/local/lib/node_modules/jsctags/node_modules/tern/plugin/requirejs.js
--'  178  36  /usr/local/lib/node_modules/jsctags/node_modules/tern/plugin/requirejs.js
--'  1  0  /usr/local/lib/node_modules/jsctags/node_modules/tern/plugin/requirejs.js
--'  16  0  /usr/local/lib/node_modules/jsctags/test/runner.js
--'  6  0  /usr/local/lib/node_modules/jsctags/test/runner.js
--'  15  4  /usr/local/lib/node_modules/jsctags/test/runner.js
--'  133  87  /usr/local/lib/node_modules/jsctags/test/runner.js
--'  18  0  /usr/local/lib/node_modules/jsctags/test/runner.js
--'  117  10  /usr/local/lib/node_modules/jsctags/test/runner.js
--'  137  4  /usr/local/lib/node_modules/jsctags/test/runner.js
--'  111  18  /usr/local/lib/node_modules/jsctags/test/runner.js
--'  13  23  /usr/local/lib/node_modules/jsctags/package.json
--'  149  6  /usr/local/lib/node_modules/jsctags/test/runner.js
--'  24  3  /usr/local/lib/node_modules/jsctags/package.json
--'  29  33  /usr/local/lib/node_modules/jsctags/examples/findref.md
--'  290  0  /usr/local/lib/node_modules/jsctags/node_modules/tern/plugin/angular.js
+-'  192  29  ~/.vim/vimrc
+-'  184  1  ~/.vim/vimrc
+-'  183  0  ~/.vim/vimrc
+-'  182  0  ~/.vim/vimrc
+-'  181  1  ~/.vim/vimrc
+-'  180  0  ~/.vim/vimrc
+-'  179  0  ~/.vim/vimrc
+-'  178  0  ~/.vim/vimrc
+-'  177  0  ~/.vim/vimrc
+-'  175  0  ~/.vim/vimrc
+-'  173  0  ~/.vim/vimrc
+-'  172  0  ~/.vim/vimrc
+-'  170  0  ~/.vim/vimrc
+-'  166  2  ~/.vim/vimrc
+-'  164  2  ~/.vim/vimrc
+-'  162  0  ~/.vim/vimrc
+-'  161  0  ~/.vim/vimrc
+-'  159  0  ~/.vim/vimrc
+-'  157  2  ~/.vim/vimrc
+-'  155  2  ~/.vim/vimrc
+-'  154  2  ~/.vim/vimrc
+-'  153  0  ~/.vim/vimrc
+-'  151  0  ~/.vim/vimrc
+-'  149  0  ~/.vim/vimrc
+-'  147  0  ~/.vim/vimrc
+-'  145  1  ~/.vim/vimrc
+-'  143  1  ~/.vim/vimrc
+-'  141  1  ~/.vim/vimrc
+-'  139  1  ~/.vim/vimrc
+-'  137  0  ~/.vim/vimrc
+-'  135  1  ~/.vim/vimrc
+-'  133  1  ~/.vim/vimrc
+-'  131  1  ~/.vim/vimrc
+-'  129  1  ~/.vim/vimrc
+-'  127  1  ~/.vim/vimrc
+-'  125  1  ~/.vim/vimrc
+-'  123  0  ~/.vim/vimrc
+-'  121  0  ~/.vim/vimrc
+-'  119  1  ~/.vim/vimrc
+-'  117  1  ~/.vim/vimrc
+-'  115  0  ~/.vim/vimrc
+-'  113  1  ~/.vim/vimrc
+-'  111  1  ~/.vim/vimrc
+-'  109  2  ~/.vim/vimrc
+-'  107  0  ~/.vim/vimrc
+-'  105  0  ~/.vim/vimrc
+-'  104  2  ~/.vim/vimrc
+-'  102  0  ~/.vim/vimrc
+-'  99  0  ~/.vim/vimrc
+-'  98  0  ~/.vim/vimrc
+-'  96  0  ~/.vim/vimrc
+-'  193  0  ~/.vim/vimrc
+-'  190  0  ~/.vim/vimrc
+-'  188  0  ~/.vim/vimrc
+-'  187  0  ~/.vim/vimrc
+-'  185  1  ~/.vim/vimrc
+-'  216  0  ~/.vim/vimrc
+-'  192  29  ~/.vim/vimrc
+-'  184  1  ~/.vim/vimrc
+-'  183  0  ~/.vim/vimrc
+-'  182  0  ~/.vim/vimrc
+-'  181  1  ~/.vim/vimrc
+-'  180  0  ~/.vim/vimrc
+-'  179  0  ~/.vim/vimrc
+-'  178  0  ~/.vim/vimrc
+-'  177  0  ~/.vim/vimrc
+-'  175  0  ~/.vim/vimrc
+-'  173  0  ~/.vim/vimrc
+-'  172  0  ~/.vim/vimrc
+-'  170  0  ~/.vim/vimrc
+-'  166  2  ~/.vim/vimrc
+-'  164  2  ~/.vim/vimrc
+-'  162  0  ~/.vim/vimrc
+-'  161  0  ~/.vim/vimrc
+-'  159  0  ~/.vim/vimrc
+-'  157  2  ~/.vim/vimrc
+-'  155  2  ~/.vim/vimrc
+-'  154  2  ~/.vim/vimrc
+-'  153  0  ~/.vim/vimrc
+-'  151  0  ~/.vim/vimrc
+-'  149  0  ~/.vim/vimrc
+-'  147  0  ~/.vim/vimrc
+-'  145  1  ~/.vim/vimrc
+-'  143  1  ~/.vim/vimrc
+-'  141  1  ~/.vim/vimrc
+-'  139  1  ~/.vim/vimrc
+-'  137  0  ~/.vim/vimrc
+-'  135  1  ~/.vim/vimrc
+-'  133  1  ~/.vim/vimrc
+-'  131  1  ~/.vim/vimrc
+-'  129  1  ~/.vim/vimrc
+-'  127  1  ~/.vim/vimrc
+-'  125  1  ~/.vim/vimrc
+-'  123  0  ~/.vim/vimrc
+-'  121  0  ~/.vim/vimrc
+-'  119  1  ~/.vim/vimrc
+-'  117  1  ~/.vim/vimrc
+-'  115  0  ~/.vim/vimrc
 
 # History of marks within files (newest to oldest):
 
 > ~/.vim/.git/COMMIT_EDITMSG
-	"	2	0
-	^	1	6
-	.	1	6
-	+	1	6
+	"	2	27
+	^	2	30
+	.	2	27
+	+	1	14
+	+	2	27
 
-> ~/sofeware/jsctags/cu.js
-	"	26	35
-	^	394	0
-	.	394	0
-	+	397	0
+> ~/.vim/vimrc
+	"	192	29
+	^	194	46
+	.	194	45
+	+	97	0
+	+	191	0
+	+	192	29
+	+	744	0
+	+	744	51
+	+	744	1
+	+	744	0
+	+	744	0
+	+	744	0
+	+	167	0
+	+	599	0
+	+	193	32
+	+	196	3
+	+	194	45
+
+> ~/.vim/[Vundle] Installer
+	"	23	26
+	.	1	0
 	+	1	0
+
+> ~/.vim/-MiniBufExplorer-
+	"	1	10
+	.	2	0
 	+	2	0
 	+	2	0
-	+	9	9
 	+	2	0
-	+	1	19
-	+	11	0
-	+	398	0
-	+	395	2
-	+	11	11
-	+	11	11
+	+	2	0
+	+	2	0
+	+	2	0
+	+	2	0
+	+	2	0
+	+	2	0
+	+	2	0
+	+	2	0
+	+	2	0
+	+	2	0
+	+	2	0
+	+	2	0
+	+	2	0
+	+	2	0
+	+	2	0
+	+	2	0
+	+	2	0
+	+	2	0
+	+	2	0
+	+	2	0
+	+	2	0
+	+	2	0
+	+	2	0
+	+	2	0
+	+	2	0
+	+	2	0
+	+	2	0
+	+	2	0
+	+	2	0
+	+	2	0
+	+	2	0
+	+	2	0
+
+> ~/Workplace/newOa/dist/js/apps/custom/customerList.ctrl.js
+	"	94	0
+	.	94	0
+	+	5	7
+	+	5	7
+	+	5	35
+	+	5	35
+	+	5	37
+	+	5	39
+	+	5	0
+	+	224	0
+	+	224	0
+	+	224	0
+	+	224	9
+	+	224	0
+	+	224	0
+	+	224	0
+	+	12	25
+	+	224	0
 	+	12	0
-	+	11	10
-	+	395	0
-	+	395	0
-	+	398	0
-	+	397	0
-	+	395	0
-	+	11	0
-	+	10	0
-	+	2	0
-	+	395	0
-	+	395	0
-	+	1	0
-	+	395	0
-	+	395	0
-	+	395	0
-	+	395	0
-	+	395	0
-	+	394	0
+	+	12	0
+	+	224	0
+	+	224	0
+	+	224	0
+	+	224	0
+	+	224	0
+	+	13	9
+	+	16	27
+	+	13	0
+	+	16	0
+	+	13	0
+	+	15	9
+	+	13	8
+	+	15	0
+	+	13	0
+	+	13	0
+	+	224	0
+	+	224	0
+	+	224	0
+	+	224	0
+	+	224	0
+	+	224	0
+	+	17	0
+	+	57	0
+	+	68	0
+	+	60	0
+	+	88	0
+	+	88	0
+	+	88	0
+	+	88	0
+	+	88	0
+	+	75	0
+	+	88	0
+	+	88	0
+	+	89	0
+	+	90	0
+	+	93	0
+	+	132	0
+	+	94	0
+	m	19	0
+	u	19	0
 
-> ~/sofeware/jsctags/ControlP
-	"	10	0
+> ~/.vim/bundle/vim-textobj-function/doc/textobj-function.txt
+	"	49	0
+
+> ~/sofeware/vim-textobj-function-javascript/.git/COMMIT_EDITMSG
+	"	1	50
+	^	1	51
+	.	1	50
+	+	1	50
+
+> ~/sofeware/vim-textobj-function-javascript/autoload/textobj/function/javascript.vim
+	"	90	23
+	^	91	24
+	.	91	23
+	+	93	16
+	+	96	0
+	+	90	0
+	+	93	11
+	+	91	26
+	+	93	0
+	+	91	18
+	+	92	0
+	+	91	23
+	e	103	19
+
+> ~/sofeware/vim-textobj-function-javascript/NERD_tree_1
+	"	9	0
+	.	1	0
+	+	1	0
+	+	1	0
+
+> ~/sofeware/vim-textobj-function-javascript/-MiniBufExplorer-
+	"	1	19
 	.	2	0
-	+	1	0
-	+	1	0
-	+	1	0
-	+	1	0
-	+	1	0
-	+	1	0
-	+	1	0
-	+	1	0
-	+	1	0
-	+	1	0
-	+	1	0
-	+	1	0
-	+	1	0
-	+	1	0
-	+	1	0
-	+	1	0
-	+	1	0
-	+	1	0
-	+	1	0
-	+	1	0
-	+	1	0
-	+	1	0
-	+	1	0
-	+	1	0
-	+	1	0
-	+	1	0
-	+	1	0
-	+	1	0
+	+	2	0
+	+	2	0
+	+	2	0
 	+	2	0
 
-> ~/sofeware/jsctags/test.js
-	"	24	0
+> /usr/share/vim/vim74/doc/eval.txt
+	"	3979	49
 
-> ~/sofeware/jsctags/-MiniBufExplorer-
-	"	1	9
+> ~/.vim/bundle/vim-textobj-function-javascript/autoload/textobj/function/javascript.vim
+	"	97	48
+	^	92	24
+	.	92	26
+	+	91	0
+	+	93	0
+	+	90	0
+	+	94	2
+	+	92	26
+
+> ~/.vim/bundle/vim-textobj-function-javascript/autoload/textobj/function/-MiniBufExplorer-
+	"	1	19
+	.	2	0
+	+	2	0
+
+> ~/.vim/bundle/vim-textobj-function-javascript/doc/textobj-function-javascript.txt
+	"	36	15
+
+> ~/Workplace/newOa/dist/js/apps/custom/-MiniBufExplorer-
+	"	1	25
 	.	2	0
 	+	2	0
 	+	2	0
@@ -584,11 +1211,728 @@ $Nov 17, 2015
 	+	2	0
 	+	2	0
 	+	2	0
+	+	2	0
+	+	2	0
+	+	2	0
 
-> ~/sofeware/jsctags/__Tagbar__
+> ~/.vim/bundle/vim-textobj-user/doc/textobj-user.txt
+	"	586	37
+
+> ~/.vim/bundle/Vundle.vim/doc/vundle.txt
+	"	410	0
+
+> ~/tip/learnVim.txt
+	"	17	0
+	^	27	12
+	.	27	11
+	+	5	36
+	+	28	13
+	+	5	42
+	+	28	0
+	+	28	0
+	+	28	0
+	+	28	8
+	+	28	14
+	+	28	0
+	+	5	40
+	+	3	0
+	+	5	0
+	+	3	37
+	+	28	0
+	+	4	0
+	+	13	19
+	+	16	24
+	+	14	27
+	+	17	8
+	+	15	0
+	+	20	58
+	+	21	59
+	+	6	15
+	+	24	46
+	+	2	44
+	+	12	0
+	+	6	6
+	+	9	30
+	+	7	46
+	+	8	75
+	+	10	30
+	+	14	42
+	+	11	33
+	+	27	11
+
+> ~/tip/NERD_tree_1
+	"	4	0
+	.	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+
+> ~/tip/-MiniBufExplorer-
+	"	1	33
+	.	2	0
+	+	2	0
+	+	2	0
+	+	2	0
+	+	2	0
+	+	2	0
+	+	2	0
+	+	2	0
+	+	2	0
+	+	2	0
+	+	2	0
+	+	2	0
+	+	2	0
+	+	2	0
+	+	2	0
+	+	2	0
+	+	2	0
+	+	2	0
+	+	2	0
+	+	2	0
+	+	2	0
+	+	2	0
+	+	2	0
+	+	2	0
+	+	2	0
+	+	2	0
+	+	2	0
+	+	2	0
+	+	2	0
+	+	2	0
+	+	2	0
+	+	2	0
+	+	2	0
+	+	2	0
+	+	2	0
+
+> ~/sofeware/text-obj-function/plugin/textobj/function.vim
+	"	1	0
+
+> ~/sofeware/vim-textobj-function/plugin/mine/javascript_textobj.vim
+	"	30	15
+	^	43	18
+	.	30	36
+	+	19	0
+	+	72	0
+	+	18	0
+	+	26	0
+	+	25	0
+	+	26	25
+	+	27	29
+	+	73	44
+	+	72	0
+	+	72	31
+	+	27	33
+	+	29	0
+	+	29	0
+	+	29	0
+	+	28	0
+	+	29	35
+	+	30	36
+	+	29	47
+	+	57	0
+	+	72	0
+	+	71	0
+	+	57	17
+	+	58	31
+	+	64	30
+	+	30	36
+	+	62	0
+	+	68	0
+	+	29	43
+	+	57	13
+	+	59	0
+	+	57	20
+	+	30	36
+	+	58	32
+	+	64	31
+	+	58	31
+	+	30	36
+	+	62	0
+	+	68	0
+	+	34	0
+	+	33	0
+	+	35	33
+	+	37	47
+	+	43	17
+	+	44	31
+	+	49	31
+	+	42	0
+	+	56	0
+	+	34	22
+	+	43	17
+	+	43	13
+	+	37	43
+	+	38	36
+	+	47	0
+	+	30	36
+
+> ~/tip/ControlP
+	"	1	0
+	.	1	0
+	+	1	0
+
+> ~/.vim/bundle/vim-textobj-function/plugin/textobj/function.vim
+	"	32	0
+
+> ~/.vim/bundle/vim-textobj-function/ControlP
+	"	1	0
+	.	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+
+> ~/.vim/bundle/vim-textobj-function/NERD_tree_1
+	"	22	17
+	.	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+
+> ~/.vim/bundle/vim-textobj-function/-MiniBufExplorer-
+	"	1	95
+	.	2	0
+	+	2	0
+	+	2	0
+	+	2	0
+	+	2	0
+	+	2	0
+	+	2	0
+	+	2	0
+	+	2	0
+	+	2	0
+	+	2	0
+	+	2	0
+	+	2	0
+	+	2	0
+	+	2	0
+	+	2	0
+	+	2	0
+	+	2	0
+	+	2	0
+	+	2	0
+	+	2	0
+	+	2	0
+	+	2	0
+	+	2	0
+	+	2	0
+	+	2	0
+	+	2	0
+	+	2	0
+	+	2	0
+	+	2	0
+	+	2	0
+	+	2	0
+	+	2	0
+	+	2	0
+	+	2	0
+	+	2	0
+	+	2	0
+
+> ~/.vim/bundle/vim-textobj-function/after/ftplugin/vim/textobj-function.vim
+	"	38	0
+
+> ~/.vim/bundle/vim-textobj-function/autoload/textobj/function/vim.vim
+	"	39	2
+
+> ~/.vim/bundle/vim-textobj-function/autoload/textobj/function.vim
+	"	45	4
+
+> ~/.vim/bundle/vim-textobj-function/Gemfile
+	"	3	0
+
+> ~/.vim/bundle/vim-textobj-function/VimFlavor
+	"	1	0
+
+> ~/.vim/bundle/vim-textobj-function/README.md
+	"	13	45
+
+> ~/.vim/bundle/vim-textobj-function/t/helpers/setup.vim
+	"	2	0
+
+> ~/.vim/bundle/vim-textobj-function/t/vim.vim
+	"	12	4
+
+> ~/.vim/plugin/function.vim
+	"	31	0
+
+> /usr/share/vim/vim74/doc/change.txt
+	"	353	12
+
+> /usr/share/vim/vim74/doc/motion.txt
+	"	404	53
+
+> /usr/share/vim/vim74/doc/help.txt
+	"	36	4
+
+> /usr/share/vim/vim74/doc/quickref.txt
+	"	7	0
+
+> ~/.vim/ControlP
+	"	1	0
+	.	1	0
+	+	1	0
+
+> /usr/share/vim/vim74/doc/options.txt
+	"	6039	44
+
+> /usr/share/vim/vim74/doc/pattern.txt
+	"	380	0
+
+> ~/sofeware/vim-textobj-function/.git/COMMIT_EDITMSG
+	"	3	34
+	^	2	52
+	.	2	49
+	+	1	20
+	+	2	49
+
+> ~/.vim/plugin/javascript_textobj.vim
+	"	31	30
+	^	36	28
+	.	34	0
+	+	52	0
+	+	52	0
+	+	53	0
+	+	52	0
+	+	52	22
+	+	52	10
+	+	3	36
+	+	15	0
+	+	14	24
+	+	19	0
+	+	51	0
+	+	20	46
+	+	27	0
+	+	28	33
+	+	42	0
+	+	42	0
+	+	35	0
+	+	42	0
+	+	43	0
+	+	27	0
+	+	29	0
+	+	35	0
+	+	30	40
+	+	35	0
+	+	35	0
+	+	35	0
+	+	29	41
+	+	30	37
+	+	29	23
+	+	35	0
+	+	32	36
+	+	35	0
+	+	38	0
+	+	36	42
+	+	35	0
+	+	29	0
+	+	36	36
+	+	38	32
+	+	32	18
+	+	32	23
+	+	32	0
+	+	22	0
+	+	23	0
+	+	22	31
+	+	22	0
+	+	22	0
+	+	22	0
+	+	23	24
+	+	52	20
+	+	52	0
+	+	52	0
+	+	28	13
+	+	14	32
+	+	52	16
+	+	20	29
+	+	22	31
+	+	28	13
+	+	20	29
+	+	31	7
+	+	33	16
+	+	31	29
+	+	33	23
+	+	39	19
+	+	38	0
+	+	32	33
+	+	33	19
+	+	39	10
+	+	33	27
+	+	39	23
+	+	27	0
+	+	27	32
+	+	27	1
+	+	27	1
+	+	27	52
+	+	27	52
+	+	27	0
+	+	19	0
+	+	27	0
+	+	27	0
+	+	31	15
+	+	37	12
+	+	37	0
+	+	27	29
+	+	30	28
+	+	36	28
+	+	27	0
+	+	26	0
+	+	31	0
+	+	34	19
+	+	40	0
+	+	37	0
+	+	40	19
+	+	30	0
+	+	36	0
+	+	30	27
+	+	36	27
+	+	30	42
+	+	36	38
+	+	40	0
+	+	34	0
+
+> ~/Workplace/newOa/.git/COMMIT_EDITMSG
+	"	2	0
+	^	2	3
+	.	2	0
+	+	2	0
+
+> ~/Workplace/newOa/dist/js/apps/oaInfo/googlePlus.ctrl.js
+	"	25	30
+	^	25	41
+	.	25	30
+	+	6	7
+	+	6	47
+	+	6	33
+	+	6	7
+	+	6	34
+	+	6	36
+	+	6	7
+	+	6	7
+	+	6	7
+	+	6	7
+	+	6	0
+	+	28	0
+	+	28	28
+	+	28	33
+	+	28	33
+	+	28	77
+	+	28	0
+	+	28	0
+	+	28	0
+	+	28	3
+	+	28	0
+	+	28	0
+	+	28	0
+	+	28	0
+	+	28	13
+	+	28	0
+	+	28	0
+	+	28	32
+	+	28	0
+	+	12	0
+	+	25	0
+	+	24	0
+	+	24	0
+	+	21	0
+	+	20	33
+	+	18	33
+	+	17	33
+	+	19	33
+	+	25	30
+
+> ~/Workplace/newOa/NERD_tree_1
+	"	18	0
+	.	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+
+> ~/Workplace/newOa/-MiniBufExplorer-
+	"	1	26
+	.	2	0
+	+	2	0
+	+	2	0
+	+	2	0
+	+	2	0
+	+	2	0
+	+	2	0
+	+	2	0
+	+	2	0
+	+	2	0
+	+	2	0
+	+	2	0
+	+	2	0
+	+	2	0
+	+	2	0
+	+	2	0
+	+	2	0
+	+	2	0
+	+	2	0
+	+	2	0
+	+	2	0
+	+	2	0
+	+	2	0
+	+	2	0
+	+	2	0
+	+	2	0
+	+	2	0
+	+	2	0
+	+	2	0
+	+	2	0
+	+	2	0
+	+	2	0
+	+	2	0
+	+	2	0
+	+	2	0
+	+	2	0
+	+	2	0
+	+	2	0
+	+	2	0
+	+	2	0
+	+	2	0
+	+	2	0
+	+	2	0
+	+	2	0
+	+	2	0
+	+	2	0
+	+	2	0
+	+	2	0
+	+	2	0
+	+	2	0
+	+	2	0
+	+	2	0
+	+	2	0
+	+	2	0
+	+	2	0
+	+	2	0
+	+	2	0
+	+	2	0
+	+	2	0
+	+	2	0
+	+	2	0
+	+	2	0
+	+	2	0
+	+	2	0
+	+	2	0
+	+	2	0
+	+	2	0
+	+	2	0
+	+	2	0
+	+	2	0
+	+	2	0
+	+	2	0
+	+	2	0
+	+	2	0
+	+	2	0
+	+	2	0
+	+	2	0
+	+	2	0
+	+	2	0
+	+	2	0
+	+	2	0
+	+	2	0
+	+	2	0
+	+	2	0
+	+	2	0
+	+	2	0
+	+	2	0
+	+	2	0
+	+	2	0
+	+	2	0
+	+	2	0
+	+	2	0
+	+	2	0
+	+	2	0
+	+	2	0
+	+	2	0
+	+	2	0
+	+	2	0
+	+	2	0
+	+	2	0
+	+	2	0
+
+> /usr/local/lib/node_modules/jsctags/node_modules/tern/plugin/requirejs.js
+	"	78	0
+
+> /usr/local/lib/node_modules/jsctags/node_modules/tern/plugin/__Tagbar__
 	"	1	0
 	.	2	0
 	+	2	0
+
+> /usr/local/lib/node_modules/jsctags/node_modules/tern/plugin/-MiniBufExplorer-
+	"	1	17
+	.	2	0
+	+	2	0
+	+	2	0
+
+> ~/Workplace/newOa/dist/js/apps/custom/customerFollowMod.ctrl.js
+	"	12	0
+
+> ~/Workplace/newOa/dist/js/apps/custom/__Tagbar__
+	"	1	0
+	.	2	0
+	+	66	0
+	+	66	0
+	+	66	0
+	+	66	0
+	+	66	0
+	+	66	0
+	+	33	0
+	+	2	0
+	+	2	0
+	+	2	0
+	+	2	0
+
+> /usr/local/lib/node_modules/jsctags/src/condenser.js
+	"	33	3
+	^	28	24
+	.	28	23
+	+	33	0
+	+	29	20
+	+	29	37
+	+	31	23
+	+	32	10
+	+	31	0
+	+	29	20
+	+	31	0
+	+	30	0
+	+	29	0
+	+	28	23
+	q	61	0
+
+> /usr/local/lib/node_modules/jsctags/src/NERD_tree_1
+	"	8	0
+	.	1	0
+	+	1	0
+
+> /usr/local/lib/node_modules/jsctags/src/-MiniBufExplorer-
+	"	1	16
+	.	2	0
+	+	2	0
+	+	2	0
+	+	2	0
+	+	2	0
+	+	2	0
+
+> /usr/local/lib/node_modules/jsctags/src/parser.js
+	"	362	0
+
+> ~/Workplace/newOa/dist/js/apps/custom/customerFollow.ctrl.js
+	"	1	0
+
+> ~/Workplace/newOa/dist/js/apps/custom/customerFollow.ctrl.s
+	"	1	0
+
+> ~/Workplace/newOa/dist/js/apps/custom/customerFollow
+	"	1	0
+
+> /usr/local/lib/node_modules/jsctags/NERD_tree_1
+	"	10	0
+	.	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+
+> /usr/local/lib/node_modules/jsctags/-MiniBufExplorer-
+	"	1	13
+	.	2	0
+	+	2	0
+	+	2	0
+	+	2	0
+	+	2	0
+	+	2	0
+	+	2	0
+	+	2	0
+	+	2	0
+	+	2	0
+	+	2	0
+	+	2	0
+	+	2	0
+	+	2	0
+	+	2	0
+	+	2	0
+	+	2	0
+	+	2	0
+	+	2	0
+	+	2	0
+	+	2	0
+	+	2	0
+	+	2	0
+	+	2	0
+	+	2	0
+	+	2	0
+	+	2	0
+	+	2	0
 	+	2	0
 	+	2	0
 	+	2	0
@@ -606,171 +1950,53 @@ $Nov 17, 2015
 	+	2	0
 	+	2	0
 
-> ~/sofeware/jsctags/undotree_2
+> ~/sofeware/angular-file-upload/examples/simple/controllers.js
+	"	13	18
+	^	13	19
+	.	13	19
+	+	13	0
+	+	12	0
+	+	13	18
+	+	18	31
+	+	13	19
+
+> /etc/nginx/nginx.conf
+	"	26	0
+	^	28	40
+	.	27	0
+	+	138	0
+	+	139	24
+	+	140	29
+	+	147	27
+	+	144	25
+	+	31	0
+	+	29	0
+	+	28	39
+	+	27	0
+
+> ~/sofeware/angular-file-upload/examples/simple/undotree_2
 	"	3	1
 	.	3	0
-	+	44	0
-	+	44	0
-	+	44	0
-	+	44	0
-	+	44	0
-	+	44	0
-	+	44	0
+	+	5	0
+	+	5	0
 	+	3	0
 
-> ~/sofeware/jsctags/diffpanel_3
-	"	1	0
-	.	6	0
-	+	6	0
-	+	6	0
-	+	6	0
-	+	6	0
-	+	6	0
-	+	6	0
-	+	6	0
-
-> ~/sofeware/jsctags/src/condenser.js
-	"	28	4
-
-> ~/sofeware/jsctags/NERD_tree_1
-	"	13	0
-	.	1	0
-	+	1	0
-	+	1	0
-	+	1	0
-	+	1	0
-	+	1	0
-	+	1	0
-
-> ~/sofeware/jsctags/src/parser.js
-	"	141	17
-
-> ~/sofeware/jsctags/bin/jsctags
-	"	61	1
-
-> ~/sofeware/tern/doc/demo/demo.js
-	"	53	0
-
-> ~/sofeware/tern/doc/demo/__Tagbar__
-	"	8	0
-	.	25	0
-	+	25	0
-	+	25	0
-	+	25	0
-	+	25	0
-	+	25	0
-	+	25	0
-	+	25	0
-	+	25	0
-	+	25	0
-	+	25	0
-	+	25	0
-	+	25	0
-
-> ~/sofeware/tern/doc/demo/-MiniBufExplorer-
-	"	1	0
+> ~/sofeware/angular-file-upload/examples/simple/-MiniBufExplorer-
+	"	1	15
 	.	2	0
 	+	2	0
 	+	2	0
-	+	2	0
-	+	2	0
-	+	2	0
-	+	2	0
-	+	2	0
 
-> ~/sofeware/tern/doc/demo/ControlP
+> ~/sofeware/angular-file-upload/examples/simple/diffpanel_3
 	"	1	0
-	.	1	0
-	+	1	0
-	+	1	0
-	+	1	0
-	+	1	0
-	+	1	0
-	+	1	0
-	+	1	0
-	+	1	0
-	+	1	0
-	+	1	0
-	+	1	0
-	+	1	0
-	+	1	0
-	+	1	0
-	+	1	0
-	+	1	0
-	+	1	0
-	+	1	0
-	+	1	0
-	+	1	0
-	+	1	0
-	+	1	0
-	+	1	0
-	+	1	0
-	+	1	0
-	+	1	0
-	+	1	0
-	+	1	0
-	+	1	0
-	+	1	0
-	+	1	0
-	+	1	0
-	+	1	0
-	+	1	0
-	+	1	0
-	+	1	0
-	+	1	0
-	+	1	0
-	+	1	0
-	+	1	0
+	.	10	0
+	+	10	0
+	+	10	0
+	+	10	0
+	+	10	0
 
-> ~/sofeware/tern/doc/demo/index.html
-	"	24	69
-
-> ~/Workplace/newOa/.tern-project
-	"	15	45
-	^	13	40
-	.	37	17
-	+	41	44
-	+	2	0
-	+	38	13
-	+	39	26
-	+	11	0
-	+	38	0
-	+	38	0
-	+	11	0
-	+	12	0
-	+	37	0
-	+	38	0
-	+	13	0
-	+	37	0
-	+	13	16
-	+	11	46
-	+	14	20
-	+	15	20
-	+	16	20
-	+	17	20
-	+	18	20
-	+	19	20
-	+	20	20
-	+	21	20
-	+	22	20
-	+	23	20
-	+	24	20
-	+	25	20
-	+	26	20
-	+	27	20
-	+	28	20
-	+	29	20
-	+	30	20
-	+	31	20
-	+	32	20
-	+	33	20
-	+	33	20
-	+	34	20
-	+	35	20
-	+	36	20
-	+	37	20
-	+	13	40
-	+	37	17
+> ~/Workplace/newOa/bower_components/angulerjs/angularFiles.js
+	"	1	0
 
 > ~/Workplace/newOa/ControlP
 	"	10	0
@@ -876,11 +2102,130 @@ $Nov 17, 2015
 	+	1	0
 	+	2	0
 
-> ~/Workplace/newOa/main.min.js
-	"	5	0
+> ~/Workplace/newOa/dist/js/commonCtrl/uploadFile.directive.js
+	"	172	0
 
-> ~/Workplace/newOa/-MiniBufExplorer-
-	"	1	32
+> ~/Workplace/newOa/pages/plugin/uploadPicture.html
+	"	16	0
+	^	29	0
+	.	29	0
+	+	29	0
+
+> ~/sofeware/angular-file-upload/examples/simple/index.html
+	"	12	37
+	^	12	38
+	.	12	37
+	+	12	21
+	+	18	21
+	+	12	37
+
+> ~/sofeware/angular-file-upload/examples/simple/ControlP
+	"	1	0
+	.	1	0
+	+	1	0
+
+> ~/sofeware/angular-file-upload/dist/angular-file-upload.js
+	"	1807	13
+	.	1814	0
+	+	1814	0
+
+> ~/sofeware/angular-file-upload/dist/__Tagbar__
+	"	15	4
+	.	16	0
+	+	16	0
+
+> ~/sofeware/angular-file-upload/dist/-MiniBufExplorer-
+	"	1	27
+	.	2	0
+	+	2	0
+	+	2	0
+
+> ~/sofeware/angular-file-upload/gulpfile.js
+	"	86	0
+
+> ~/sofeware/angular-file-upload/package.json
+	"	11	0
+
+> /etc/network/interfaces
+	"	13	0
+	.	14	0
+	+	9	0
+	+	6	0
+	+	7	0
+	+	12	0
+	+	14	0
+
+> ~/sofeware/jsctags/jsctags/cu.js
+	"	138	0
+	^	398	0
+	.	398	0
+	+	399	0
+	+	399	0
+	+	15	19
+	+	14	12
+	+	14	9
+	+	14	12
+	+	14	0
+	+	14	12
+	+	399	0
+	+	399	16
+	+	17	0
+	+	15	25
+	+	3	12
+	+	4	12
+	+	3	0
+	+	399	14
+	+	399	0
+	+	399	30
+	+	399	3
+	+	399	16
+	+	13	0
+	+	12	0
+	+	13	25
+	+	399	18
+	+	17	28
+	+	399	0
+	+	398	0
+
+> ~/sofeware/jsctags/jsctags/__Tagbar__
+	"	4	6
+	.	13	0
+	+	13	0
+	+	13	0
+	+	13	0
+	+	13	0
+	+	13	0
+	+	13	0
+	+	13	0
+	+	13	0
+	+	13	0
+	+	13	0
+	+	13	0
+	+	13	0
+	+	13	0
+	+	13	0
+	+	13	0
+	+	13	0
+	+	13	0
+	+	13	0
+	+	13	0
+	+	13	0
+	+	13	0
+	+	13	0
+	+	13	0
+	+	13	0
+	+	13	0
+	+	13	0
+	+	13	0
+	+	13	0
+	+	13	0
+	+	13	0
+	+	13	0
+	+	13	0
+	+	13	0
+
+> ~/sofeware/jsctags/jsctags/-MiniBufExplorer-
+	"	1	0
 	.	2	0
 	+	2	0
 	+	2	0
@@ -945,24 +2290,50 @@ $Nov 17, 2015
 	+	2	0
 	+	2	0
 	+	2	0
-	+	2	0
-	+	2	0
-	+	2	0
-	+	2	0
-	+	2	0
-	+	2	0
-	+	2	0
-	+	2	0
-	+	2	0
-	+	2	0
-	+	2	0
-	+	2	0
-	+	2	0
-	+	2	0
-	+	2	0
-	+	2	0
-	+	2	0
-	+	2	0
+
+> ~/sofeware/jsctags/jsctags/NERD_tree_1
+	"	11	5
+	.	1	0
+	+	1	0
+
+> ~/sofeware/jsctags/jsctags/test.js
+	"	8	17
+
+> ~/sofeware/jsctags/jsctags/c.js
+	"	6	0
+
+> ~/sofeware/jsctags/jsctags/customerList.ctrl.js.bak
+	"	10	4
+
+> ~/sofeware/jsctags/jsctags/undotree_2
+	"	41	1
+	.	31	0
+	+	78	0
+	+	78	0
+	+	78	0
+	+	78	0
+	+	78	0
+	+	78	0
+	+	78	0
+	+	78	0
+	+	59	0
+	+	59	0
+	+	67	0
+	+	67	0
+	+	42	0
+	+	42	0
+	+	42	0
+	+	42	0
+	+	31	0
+	+	31	0
+	+	31	0
+	+	31	0
+	+	31	0
+	+	31	0
+
+> ~/sofeware/jsctags/jsctags/diffpanel_3
+	"	1	0
+	.	2	0
 	+	2	0
 	+	2	0
 	+	2	0
@@ -983,1127 +2354,255 @@ $Nov 17, 2015
 	+	2	0
 	+	2	0
 
-> ~/Workplace/newOa/dist/js/apps/custom/customerList.ctrl.js
-	"	166	21
-	^	13	0
-	.	13	0
-	+	70	0
-	+	13	0
-	e	48	8
-	q	48	8
+> ~/Workplace/newOa/dist/js/apps/issue/issue.ctrl.js
+	"	1	0
 
 > ~/Workplace/newOa/__Tagbar__
 	"	1	0
 	.	2	0
-	+	97	0
-	+	97	0
-	+	97	0
-	+	97	0
-	+	97	0
-	+	97	0
-	+	97	0
-	+	97	0
-	+	97	0
-	+	97	0
-	+	97	0
-	+	97	0
-	+	97	0
-	+	97	0
-	+	97	0
-	+	97	0
-	+	97	0
-	+	97	0
-	+	97	0
-	+	97	0
-	+	97	0
-	+	97	0
-	+	97	0
-	+	97	0
-	+	97	0
-	+	97	0
-	+	97	0
-	+	97	0
-	+	97	0
-	+	97	0
-	+	97	0
-	+	97	0
-	+	97	0
-	+	97	0
-	+	97	0
-	+	97	0
-	+	97	0
-	+	97	0
-	+	97	0
-	+	97	0
-	+	97	0
-	+	97	0
-	+	97	0
-	+	97	0
-	+	97	0
-	+	97	0
-	+	97	0
-	+	97	0
-	+	97	0
-	+	97	0
-	+	97	0
-	+	97	0
-	+	97	0
-	+	97	0
-	+	92	0
-	+	92	0
-	+	92	0
-	+	92	0
-	+	92	0
-	+	92	0
-	+	92	0
-	+	92	0
-	+	92	0
-	+	92	0
-	+	92	0
-	+	92	0
-	+	92	0
-	+	92	0
-	+	92	0
-	+	92	0
-	+	92	0
-	+	92	0
-	+	92	0
-	+	92	0
-	+	92	0
-	+	92	0
-	+	92	0
-	+	92	0
-	+	92	0
-	+	92	0
-	+	92	0
-	+	92	0
-	+	92	0
-	+	92	0
-	+	92	0
-	+	60	0
-	+	60	0
-	+	29	0
-	+	29	0
-	+	2	0
-	+	2	0
-	+	2	0
-	+	2	0
-	+	2	0
-	+	2	0
-	+	2	0
-	+	2	0
-	+	2	0
-	+	2	0
-	+	2	0
-
-> ~/Workplace/newOa/dist/js/base/utility.js
-	"	7	0
-	^	218	13
-	.	218	12
-	+	222	0
-	+	206	22
-	+	218	11
-	+	207	0
-	+	218	0
-	+	207	45
-	+	208	86
-	+	211	0
-	+	219	11
-	+	208	72
-	+	209	0
-	+	210	0
-	+	209	76
-	+	210	0
-	+	209	94
-	+	219	22
-	+	221	11
-	+	220	106
-	+	221	0
-	+	212	48
-	+	213	47
-	+	214	47
-	+	215	58
-	+	216	90
-	+	217	85
-	+	222	24
-	+	227	11
-	+	223	0
-	+	227	0
-	+	228	23
-	+	229	11
-	+	174	0
-	+	260	16
-	+	241	15
-	+	240	0
-	+	241	14
-	+	221	0
-	+	242	0
-	+	235	0
-	+	241	14
-	+	236	25
-	+	237	24
-	+	239	26
-	+	237	0
-	+	198	0
-	+	199	0
-	+	178	11
-	+	178	29
-	+	186	39
-	+	188	34
-	+	193	0
-	+	196	22
-	+	188	29
-	+	203	0
-	+	188	26
-	+	203	57
-	+	231	48
-	+	232	12
-	+	227	12
-	+	221	12
-	+	218	12
-
-> ~/sofeware/jsctags/customerList.ctrl.js.bak
-	"	1	0
-
-> /tmp/test.js
-	"	28	33
-	^	2	1
-	.	2	0
-	+	1	30
-	+	1	4
-	+	1	8
-	+	1	0
-	+	1	0
-	+	1	0
-	+	1	0
-	+	1	18
-	+	1	0
-	+	1	0
-	+	1	0
-	+	1	0
-	+	1	0
-	+	1	19
-	+	1	17
-	+	1	16
-	+	1	0
-	+	1	2
-	+	1	9
-	+	1	0
-	+	1	0
-	+	1	0
-	+	1	0
-	+	1	0
-	+	1	0
-	+	1	0
-	+	1	25
-	+	1	65
-	+	1	52
-	+	1	62
-	+	1	56
-	+	1	71
-	+	1	52
-	+	1	57
-	+	1	63
-	+	1	33
-	+	1	0
-	+	1	0
-	+	1	0
-	+	1	0
-	+	1	26
-	+	1	34
-	+	1	26
-	+	1	36
-	+	1	53
-	+	1	38
-	+	1	49
-	+	1	77
-	+	1	55
-	+	1	111
-	+	1	77
-	+	1	67
-	+	1	0
-	+	1	0
-	+	1	0
-	+	1	0
-	+	1	54
-	+	1	46
-	+	1	70
-	+	1	0
-	+	1	124
-	+	1	111
-	+	1	135
-	+	1	86
-	+	1	0
-	+	1	0
-	+	1	0
-	+	1	0
-	+	1	0
-	+	1	0
-	+	1	0
-	+	1	0
-	+	1	2
-	+	1	0
-	+	1	1
-	+	1	0
-	+	1	0
-	+	2	14
-	+	3	62
-	+	4	47
-	+	5	53
-	+	6	45
-	+	8	54
-	+	9	31
-	+	12	41
-	+	13	47
-	+	25	74
-	+	26	42
-	+	31	51
-	+	41	63
-	+	45	48
-	+	50	59
-	+	53	87
-	+	58	121
-	+	61	87
-	+	70	107
-	+	70	0
-	+	12	0
-	+	70	30
-	+	2	0
-
-> /tmp/__Tagbar__
-	"	1	0
-	.	2	0
-	+	2	0
-	+	2	0
-	+	2	0
-	+	2	0
-	+	2	0
-	+	2	0
-	+	2	0
-	+	2	0
-	+	2	0
-	+	2	0
-	+	2	0
-	+	2	0
-	+	2	0
-	+	2	0
-	+	2	0
-	+	2	0
-	+	2	0
-	+	2	0
-	+	2	0
-	+	2	0
-	+	2	0
-	+	2	0
-	+	2	0
-	+	2	0
-	+	2	0
-	+	2	0
-	+	2	0
-	+	2	0
-	+	2	0
-	+	2	0
-	+	2	0
-	+	2	0
-	+	2	0
-	+	2	0
-	+	2	0
-	+	2	0
-	+	2	0
-	+	2	0
-	+	2	0
-	+	2	0
-	+	2	0
-	+	2	0
-	+	2	0
-	+	2	0
-	+	2	0
-	+	2	0
-	+	2	0
-	+	2	0
-	+	2	0
-	+	2	0
-	+	2	0
-	+	2	0
-	+	2	0
-	+	2	0
-	+	2	0
-	+	2	0
-	+	2	0
-	+	2	0
-	+	2	0
-	+	2	0
-	+	2	0
-	+	2	0
-	+	2	0
-
-> /tmp/-MiniBufExplorer-
-	"	1	11
-	.	2	0
-	+	2	0
-	+	2	0
-	+	2	0
-	+	2	0
-	+	2	0
-	+	2	0
-	+	2	0
-	+	2	0
-	+	2	0
-	+	2	0
-	+	2	0
-	+	2	0
-	+	2	0
-	+	2	0
-	+	2	0
-	+	2	0
-	+	2	0
-	+	2	0
-	+	2	0
-	+	2	0
-	+	2	0
-	+	2	0
-	+	2	0
-	+	2	0
-	+	2	0
-	+	2	0
-	+	2	0
-	+	2	0
-	+	2	0
-	+	2	0
-	+	2	0
-	+	2	0
-	+	2	0
-	+	2	0
-	+	2	0
-	+	2	0
-	+	2	0
-	+	2	0
-	+	2	0
-	+	2	0
-	+	2	0
-	+	2	0
-	+	2	0
-	+	2	0
-	+	2	0
-
-> /tmp/main.js
-	"	1	56
-	^	1	29
-	.	1	28
-	+	1	54
-	+	2	46
-	+	4	70
-	+	7	20
-	+	7	18
-	+	2	0
-	+	1	28
-
-> /tmp/text_util.js
-	"	4	9
-	^	1	15
-	.	1	14
-	+	1	5
-	+	2	10
-	+	4	41
-	+	5	70
-	+	9	55
-	+	10	82
-	+	11	98
-	+	15	58
-	+	1	6
-	+	15	0
-	+	2	0
-	+	15	1
-	+	1	0
-	+	2	0
-	+	1	14
-
-> /usr/local/lib/node_modules/jsctags/node_modules/tern/plugin/requirejs.js
-	"	12	31
-
-> /tmp/.tern_project
-	"	13	26
-	.	11	29
-	+	16	0
-	+	1	0
-	+	12	0
-	+	11	29
-
-> /usr/local/lib/node_modules/jsctags/node_modules/tern/plugin/angular.js
-	"	290	0
-
-> /usr/local/lib/node_modules/jsctags/NERD_tree_1
-	"	36	3
-	.	1	0
-	+	1	0
-	+	1	0
-	+	1	0
-	+	1	0
-	+	1	0
-	+	1	0
-	+	1	0
-	+	1	0
-	+	1	0
-	+	1	0
-	+	1	0
-	+	1	0
-	+	1	0
-	+	1	0
-	+	1	0
-	+	1	0
-	+	1	0
-	+	1	0
-	+	1	0
-	+	1	0
-
-> /usr/local/lib/node_modules/jsctags/-MiniBufExplorer-
-	"	1	45
-	.	2	0
-	+	2	0
-	+	2	0
-	+	2	0
-	+	2	0
-	+	2	0
-	+	2	0
-	+	2	0
-	+	2	0
-	+	2	0
-	+	2	0
-	+	2	0
-	+	2	0
-	+	2	0
-	+	2	0
-	+	2	0
-	+	2	0
-	+	2	0
-	+	2	0
-	+	2	0
-	+	2	0
-	+	2	0
-
-> /usr/local/lib/node_modules/jsctags/examples/findref.md
-	"	29	33
-
-> /usr/local/lib/node_modules/jsctags/package.json
-	"	36	0
-	^	36	0
-	.	35	28
-	+	31	14
-	+	35	28
-
-> /usr/local/lib/node_modules/jsctags/test/runner.js
-	"	16	0
-	.	19	13
-	+	19	13
-
-> /usr/local/lib/node_modules/jsctags/__Tagbar__
-	"	11	2
-	.	29	0
-	+	29	0
-	+	29	0
-
-> ~/.vim/bundle/tern_for_vim/package.json
-	"	1	0
-
-> ~/.vim/bundle/tern_for_vim/NERD_tree_1
-	"	17	5
-	.	1	0
-	+	1	0
-	+	1	0
-	+	1	0
-	+	1	0
-	+	1	0
-
-> ~/.vim/bundle/tern_for_vim/-MiniBufExplorer-
-	"	1	47
-	.	2	0
-	+	2	0
-	+	2	0
-	+	2	0
-	+	2	0
-	+	2	0
-	+	2	0
-	+	2	0
-	+	2	0
-	+	2	0
-
-> ~/.vim/bundle/tern_for_vim/vim_config.json
-	"	10	24
-
-> ~/.vim/bundle/tern_for_vim/autoload/tern.vim
-	"	88	0
-
-> ~/.vim/bundle/tern_for_vim/script/tern.py
-	"	101	37
-
-> ~/sofeware/jsctags/c.js
-	"	3	13
-	^	2	14
-	.	2	13
-	+	6	0
-	+	5	11
-	+	6	0
-	+	2	13
-
-> /usr/local/lib/node_modules/jsctags/test/cases/arguments.js
-	"	3	0
-
-> /usr/local/lib/node_modules/jsctags/test/cases/NERD_tree_1
-	"	6	0
-	.	1	0
-	+	1	0
-
-> /usr/local/lib/node_modules/jsctags/test/cases/-MiniBufExplorer-
-	"	1	87
-	.	2	0
-	+	2	0
-	+	2	0
-	+	2	0
-	+	2	0
-	+	2	0
-	+	2	0
-	+	2	0
-	+	2	0
-	+	2	0
-	+	2	0
-	+	2	0
-	+	2	0
-	+	2	0
-	+	2	0
-	+	2	0
-	+	2	0
-
-> /usr/local/lib/node_modules/jsctags/test/cases/autothis.js
-	"	11	0
-
-> /usr/local/lib/node_modules/jsctags/test/cases/browser.js
-	"	1	0
-
-> /usr/local/lib/node_modules/jsctags/test/cases/builtins.js
-	"	55	0
-
-> /usr/local/lib/node_modules/jsctags/test/cases/builtins.json
-	"	1	0
-
-> /usr/local/lib/node_modules/jsctags/test/cases/_.json
-	"	2752	0
-
-> /usr/local/lib/node_modules/jsctags/test/cases/_.tags
-	"	210	0
-
-> ~/sofeware/jsctags/customerList.ctrl.js
-	"	2	0
-	^	2	17
-	.	2	16
-	+	1	0
-	+	5	1
-	+	5	0
-	+	5	0
-	+	3	11
-	+	1	0
-	+	2	16
-
-> /usr/local/lib/node_modules/jsctags/.istanbul.yml
-	"	1	0
-
-> ~/.vim/vimrc
-	"	271	0
-	^	274	0
-	.	273	0
-	+	315	0
-	+	317	0
-	+	319	6
-	+	320	6
-	+	320	6
-	+	320	6
-	+	320	6
-	+	319	12
-	+	318	14
-	+	320	0
-	+	318	0
-	+	317	0
-	+	318	0
-	+	319	0
-	+	320	0
-	+	283	0
-	+	275	0
-	+	275	0
-	+	265	51
-	+	270	0
-	+	266	0
-	+	267	0
-	+	268	31
-	+	267	31
-	+	275	0
-	+	271	0
-	+	270	0
-	+	271	0
-	+	270	0
-	+	335	7
-	+	336	7
-	+	337	7
-	+	328	0
-	+	330	16
-	+	329	20
-	+	321	45
-	+	324	0
-	+	325	0
-	+	326	0
-	+	327	0
-	+	326	56
-	+	316	0
-	+	316	0
-	+	315	0
-	+	315	0
-	+	315	0
-	+	339	0
-	+	272	0
-	+	273	0
-	+	273	0
-
-> /usr/local/lib/node_modules/jsctags/node_modules/tern/defs/jquery.json
-	"	94	37
-
-> ~/Workplace/newOa/dist/js/apps/custom/__Tagbar__
-	"	1	0
-	.	2	0
-	+	67	0
-	+	67	0
-	+	67	0
-	+	67	0
-	+	67	0
-	+	67	0
-	+	34	0
-	+	2	0
-	+	2	0
-
-> ~/Workplace/newOa/dist/js/apps/custom/-MiniBufExplorer-
-	"	1	25
-	.	2	0
-	+	2	0
-	+	2	0
-	+	2	0
-	+	2	0
-	+	2	0
-	+	2	0
-	+	2	0
-	+	2	0
-	+	2	0
-	+	2	0
-	+	2	0
-	+	2	0
-	+	2	0
-	+	2	0
-	+	2	0
-	+	2	0
-	+	2	0
-	+	2	0
-	+	2	0
-	+	2	0
-	+	2	0
-	+	2	0
-	+	2	0
-	+	2	0
-	+	2	0
-	+	2	0
-	+	2	0
-	+	2	0
-	+	2	0
-	+	2	0
-	+	2	0
-	+	2	0
-	+	2	0
-	+	2	0
-	+	2	0
-	+	2	0
-	+	2	0
-	+	2	0
-	+	2	0
-	+	2	0
-	+	2	0
-	+	2	0
-	+	2	0
-	+	2	0
-	+	2	0
-	+	2	0
-	+	2	0
-	+	2	0
-	+	2	0
-	+	2	0
-	+	2	0
-	+	2	0
-	+	2	0
-	+	2	0
-	+	2	0
-	+	2	0
-
-> ~/sofeware/jsctags/readme.md
-	"	76	0
-	^	34	1
-	.	34	0
-	+	34	0
-
-> ~/sofeware/jsctags/bin/xjsctags
-	"	22	0
-
-> ~/sofeware/jsctags/package.json
-	"	16	4
-
-> /usr/local/bin/jsctags
-	"	5	0
-
-> ~/Workplace/newOa/dist/js/apps/custom/tags
-	"	7	0
-
-> ~/.vim/bundle/tagbar/doc/tagbar.txt
-	"	889	0
-
-> ~/.vim/-MiniBufExplorer-
-	"	1	10
-	.	2	0
-	+	2	0
-	+	2	0
-	+	2	0
-	+	2	0
-	+	2	0
-	+	2	0
-
-> ~/.vim/bundle/vim-airline/doc/airline.txt
-	"	232	0
-
-> ~/sofeware/jsctags/contributing.md
-	"	7	0
-
-> ~/sofeware/jsctags/examples/arguments.md
-	"	1	0
-
-> ~/sofeware/jsctags/examples/NERD_tree_1
-	"	20	0
-	.	1	0
-	+	1	0
-
-> ~/sofeware/jsctags/examples/-MiniBufExplorer-
-	"	1	31
-	.	2	0
-	+	2	0
-	+	2	0
-	+	2	0
-	+	2	0
-	+	2	0
-	+	2	0
-	+	2	0
-
-> ~/sofeware/jsctags/examples/autothis.md
-	"	75	0
-
-> ~/sofeware/jsctags/examples/global_this.md
-	"	4	0
-
-> ~/Workplace/newOa/dist/js/apps/custom/customerFollow.ctrl.js
-	"	1	0
-
-> ~/Workplace/newOa/dist/js/apps/custom/customer
-	"	1	0
-
-> ~/sofeware/doctorjs/Makefile
-	"	18	7
-	^	14	63
-	.	15	1
-	+	14	51
-	+	15	21
-	+	14	41
-	+	13	66
-	+	14	62
-	+	15	1
-
-> ~/sofeware/mydoctorjs/.git/COMMIT_EDITMSG
-	"	1	11
-	^	1	12
-	.	1	11
-	+	1	11
-
-> ~/sofeware/mydoctorjs/.git/config
-	"	2	0
-
-> ~/sofeware/mydoctorjs/.gitignore
-	"	1	0
-
-> ~/sofeware/mydoctorjs/lib/jsctags/ctags/index.js
-	"	46	0
-	.	46	0
-	+	46	0
-
-> ~/sofeware/doctorjs/lib/jsctags/ctags/index.js
-	"	50	0
-	.	46	0
-	+	46	0
-
-> /usr/local/lib/node_modules/jsctags/src/local-scope/index.js
-	"	68	6
-
-> /usr/local/lib/node_modules/jsctags/src/ctags.js
-	"	10	21
-
-> ~/.zshrc
-	"	91	0
-	^	92	47
-	.	92	47
-	+	87	60
-	+	90	30
-	+	94	0
-	+	92	47
-
-> ~/sofeware/doctorjs/README.md
-	"	17	0
-
-> ~/.ctags
-	"	2	0
-	^	11	61
-	.	11	61
-	+	11	61
-
-> ~/Workplace/newOa/index.html
-	"	43	0
-	^	57	5
-	.	57	5
-	+	57	5
-	a	59	4
-	h	18	0
-	m	59	13
-
-> ~/.vim/bundle/tern_for_vim/README.md
-	"	66	0
-
-> ~/.vim/[Vundle] Installer
-	"	29	33
-	.	1	0
-	+	1	0
-
-> ~/Workplace/newOa/.gitignore
-	"	11	7
-
-> /tmp/vimrc
-	"	285	1
-	^	79	21
-	.	273	0
-	+	49	0
-	+	80	0
-	+	84	0
-	+	83	0
-	+	79	20
-	+	275	0
-	+	307	0
-	+	274	0
-	+	273	0
-	a	1	0
-	b	1	0
-	c	1	0
-	d	1	0
-	e	1	0
-	f	1	0
-	g	1	0
-	h	1	0
-	i	1	0
-	j	1	0
-	k	1	0
-	l	1	0
-	m	91	0
-	n	1	0
-	o	1	0
-	p	1	0
-	q	1	0
-	r	1	0
-	s	1	0
-	t	1	0
-	u	1	0
-	v	1	0
-	w	1	0
-	x	1	0
-	y	1	0
-	z	1	0
-
-> ~/.vim/doc/showmarks.txt
-	"	74	46
-	.	265	0
-	+	265	0
-
-> ~/Workplace/newOa/dist/js/apps/custom/customer.ctrl.js
-	"	1	0
-
-> ~/Workplace/newOa/dist/js/apps/custom/customerNew.ctrl.js
-	"	449	23
-	.	450	0
-	+	1	0
-	+	114	0
-	+	121	22
-	+	121	12
-	+	121	27
-	+	121	14
-	+	121	31
-	+	121	25
-	+	121	27
-	+	121	35
-	+	121	30
-	+	121	0
-	+	121	18
-	+	121	18
-	+	121	0
-	+	121	0
-	+	121	14
-	+	121	24
-	+	121	25
-	+	121	26
-	+	75	0
-	+	71	31
-	+	72	31
-	+	121	0
-	+	77	0
-	+	89	21
-	+	93	21
-	+	90	0
 	+	93	0
-	+	94	14
-	+	95	24
-	+	96	25
-	+	97	26
-	+	69	16
-	+	74	34
-	+	651	0
-	+	652	0
-	+	637	0
-	+	615	0
-	+	447	21
-	+	450	0
-	a	1	0
-	b	1	0
-	c	1	0
-	d	1	0
-	e	1	0
-	f	1	0
-	g	1	0
-	h	1	0
-	i	1	0
-	j	1	0
-	k	1	0
-	l	1	0
-	m	1	0
-	n	1	0
-	o	449	37
-	p	1	0
-	q	1	0
-	r	1	0
-	s	1	0
-	t	1	0
-	u	1	0
-	v	1	0
-	w	1	0
-	x	1	0
-	y	1	0
-	z	1	0
+	+	93	0
+	+	93	0
+	+	93	0
+	+	93	0
+	+	93	0
+	+	93	0
+	+	93	0
+	+	93	0
+	+	93	0
+	+	93	0
+	+	93	0
+	+	93	0
+	+	93	0
+	+	93	0
+	+	93	0
+	+	93	0
+	+	93	0
+	+	93	0
+	+	93	0
+	+	93	0
+	+	93	0
+	+	93	0
+	+	93	0
+	+	93	0
+	+	93	0
+	+	93	0
+	+	93	0
+	+	93	0
+	+	93	0
+	+	93	0
+	+	93	0
+	+	93	0
+	+	93	0
+	+	93	0
+	+	93	0
+	+	93	0
+	+	93	0
+	+	93	0
+	+	93	0
+	+	93	0
+	+	93	0
+	+	93	0
+	+	93	0
+	+	93	0
+	+	93	0
+	+	93	0
+	+	93	0
+	+	93	0
+	+	88	0
+	+	88	0
+	+	88	0
+	+	88	0
+	+	88	0
+	+	88	0
+	+	88	0
+	+	88	0
+	+	88	0
+	+	88	0
+	+	88	0
+	+	88	0
+	+	88	0
+	+	88	0
+	+	88	0
+	+	88	0
+	+	88	0
+	+	88	0
+	+	88	0
+	+	88	0
+	+	88	0
+	+	88	0
+	+	88	0
+	+	88	0
+	+	88	0
+	+	88	0
+	+	88	0
+	+	88	0
+	+	88	0
+	+	88	0
+	+	88	0
+	+	56	0
+	+	56	0
+	+	25	0
+	+	25	0
+	+	2	0
+	+	2	0
+	+	2	0
+	+	2	0
+	+	2	0
+	+	2	0
+	+	2	0
+	+	2	0
+	+	2	0
+	+	2	0
+	+	2	0
+	+	2	0
+	+	2	0
+	+	2	0
+	+	2	0
+	+	2	0
 
-> ~/.vim/plugin/showmarks.vim
-	"	507	0
-	.	508	0
-	+	508	0
-
-> ~/.vim/undotree_2
-	"	3	1
-	.	3	0
-	+	26	0
-	+	26	0
-	+	26	0
-	+	26	0
-	+	26	0
-	+	26	0
-	+	26	0
-	+	26	0
-	+	26	0
-	+	26	0
-	+	26	0
-	+	26	0
-	+	26	0
-	+	26	0
-	+	26	0
-	+	26	0
-	+	26	0
-	+	26	0
-	+	26	0
-	+	26	0
-	+	26	0
-	+	26	0
-	+	26	0
-	+	26	0
-	+	26	0
-	+	26	0
-	+	26	0
-	+	26	0
-	+	26	0
-	+	26	0
-	+	26	0
-	+	26	0
-	+	26	0
-	+	26	0
-	+	26	0
-	+	26	0
-	+	26	0
-	+	26	0
-	+	26	0
-	+	26	0
-	+	26	0
-	+	26	0
-	+	26	0
-	+	3	0
-
-> ~/.vim/diffpanel_3
-	"	1	0
-	.	4	0
-	+	4	0
-	+	4	0
-	+	4	0
-	+	4	0
-	+	4	0
-	+	4	0
-	+	4	0
-	+	4	0
-	+	4	0
-	+	4	0
-	+	4	0
-	+	4	0
-	+	4	0
-	+	4	0
-	+	4	0
-	+	4	0
-	+	4	0
-	+	4	0
-	+	4	0
-	+	4	0
-	+	4	0
-	+	4	0
-	+	4	0
-	+	4	0
-	+	4	0
-	+	4	0
-	+	4	0
-	+	4	0
-	+	4	0
-	+	4	0
-	+	4	0
-	+	4	0
-	+	4	0
-	+	4	0
-	+	4	0
-	+	4	0
-	+	4	0
-	+	4	0
-	+	4	0
-	+	4	0
-	+	4	0
-	+	4	0
-	+	4	0
-	+	4	0
-	+	4	0
-
-> ~/.vim/ControlP
+> /usr/local/lib/node_modules/jsctags/examples/amd.js
 	"	1	0
 	.	1	0
+	+	15	0
 	+	1	0
+
+> /usr/local/lib/node_modules/jsctags/examples/amdjs.md
+	"	1	0
+
+> ~/sofeware/jsctags/test/runner.js
+	"	149	37
+
+> ~/sofeware/jsctags/NERD_tree_1
+	"	5	5
+	.	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+
+> ~/sofeware/jsctags/-MiniBufExplorer-
+	"	1	24
+	.	2	0
+	+	2	0
+	+	2	0
+	+	2	0
+	+	2	0
+	+	2	0
+	+	2	0
+	+	2	0
+	+	2	0
+	+	2	0
+	+	2	0
+	+	2	0
+	+	2	0
+	+	2	0
+	+	2	0
+	+	2	0
+	+	2	0
+	+	2	0
+	+	2	0
+	+	2	0
+	+	2	0
+	+	2	0
+	+	2	0
+	+	2	0
+	+	2	0
+	+	2	0
+	+	2	0
+	+	2	0
+	+	2	0
+	+	2	0
+	+	2	0
+	+	2	0
+	+	2	0
+	+	2	0
+	+	2	0
+	+	2	0
+	+	2	0
+	+	2	0
+	+	2	0
+	+	2	0
+	+	2	0
+	+	2	0
+	+	2	0
+	+	2	0
+	+	2	0
+	+	2	0
+	+	2	0
+	+	2	0
+	+	2	0
+	+	2	0
+	+	2	0
+	+	2	0
+	+	2	0
+	+	2	0
+	+	2	0
+	+	2	0
+	+	2	0
+	+	2	0
+	+	2	0
+	+	2	0
+	+	2	0
+	+	2	0
+	+	2	0
+	+	2	0
+	+	2	0
+	+	2	0
+	+	2	0
+	+	2	0
+	+	2	0
+	+	2	0
+	+	2	0
+	+	2	0
+	+	2	0
+	+	2	0
+
+> ~/sofeware/jsctags/bin/jsctags
+	"	54	21
+
+> ~/sofeware/jsctags/src/condenser.js
+	"	7	3
+
+> ~/sofeware/jsctags/src/parser.js
+	"	90	9
+
+> ~/sofeware/jsctags/__Tagbar__
+	"	3	2
+	.	12	0
+	+	12	0
+	+	12	0
+	+	12	0
+	+	12	0
+	+	12	0
+	+	12	0
+	+	12	0
+	+	12	0
+	+	12	0
+	+	12	0
+	+	12	0
+	+	12	0
+	+	12	0
+	+	12	0
+	+	12	0
+	+	12	0
+	+	12	0
+	+	12	0
+	+	12	0
+	+	12	0
+	+	12	0
+	+	12	0
+	+	12	0
