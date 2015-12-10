@@ -157,9 +157,6 @@ Plugin 'kien/ctrlp.vim'
 ""Plugin 'brookhong/neco-php' 
 ""顶部minibuf
 Plugin 'fholgado/minibufexpl.vim'
-"" snips which needs python and python3
-Plugin 'SirVer/ultisnips'
-Plugin 'honza/vim-snippets'
 ""底栏
 ""Plugin 'Lokaltog/vim-powerline'
 ""taglist
@@ -191,7 +188,17 @@ Plugin 'gorodinskiy/vim-coloresque'
 
 Plugin 'kana/vim-textobj-user'
 Plugin 'kana/vim-textobj-function'
-Plugin 'thinca/vim-textobj-function-javascript'
+"Plugin 'thinca/vim-textobj-function-javascript'
+
+"Plugin 'anzizhao/vim-textobj-function'
+Plugin 'anzizhao/vim-textobj-function-javascript'            
+
+"" snips which needs python and python3
+Plugin 'SirVer/ultisnips'
+Plugin 'MarcWeber/vim-addon-mw-utils'
+Plugin 'tomtom/tlib_vim'
+Plugin 'garbas/vim-snipmate'            
+Plugin 'honza/vim-snippets'
 
 "end
 call vundle#end()
@@ -564,6 +571,12 @@ autocmd Filetype sh :UltiSnipsAddFiletypes sh
 " " If you want :UltiSnipsEdit to split your window.
  let g:UltiSnipsEditSplit="vertical"
 
+ :imap <C-J> <Plug>snipMateNextOrTrigger
+ :smap <C-J> <Plug>snipMateNextOrTrigger
+
+"autocmd Filetype javascript <Plug>snipMateTrigger  
+autocmd Filetype javascript :SnipMateLoadScope   javascript
+
  """""""""""""""""
  "  git control  "
  """""""""""""""""
@@ -740,4 +753,6 @@ nmap <leader>st :ShowMarksToggle<cr>
 
 source ~/.vim/plugin/cscope_maps.vim
 
+map ty "ay
+map tp "ap
 
